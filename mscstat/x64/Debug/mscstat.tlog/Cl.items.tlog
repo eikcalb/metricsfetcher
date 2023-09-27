@@ -1,0 +1,14 @@
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Application.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\Application.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\ConfigManager.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\CPUMetricProvider.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\CPUMetricProvider.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\DataManager.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\DataManager.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\LogManager.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\LogManager.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricProviderBase.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\MetricProviderBase.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\MetricsManager.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\mscstat.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\mscstat.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\NetworkMetricProvider.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\NetworkMetricProvider.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ProcessMetricProvider.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\ProcessMetricProvider.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\RAMMetricProvider.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\RAMMetricProvider.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\StorageMetricProvider.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\StorageMetricProvider.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ThreadManager.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\ThreadManager.obj
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.cpp;C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\x64\Debug\Utils.obj

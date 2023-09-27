@@ -1,0 +1,41 @@
+﻿  Application.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.h(30,47): warning C4244: 'argument': conversion from 'UINT64' to 'UINT16', possible loss of data
+  CPUMetricProvider.cpp
+  DataManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.h(30,47): warning C4244: 'argument': conversion from 'UINT64' to 'UINT16', possible loss of data
+  LogManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.h(30,47): warning C4244: 'argument': conversion from 'UINT64' to 'UINT16', possible loss of data
+  MetricProviderBase.cpp
+  MetricsManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.h(30,47): warning C4244: 'argument': conversion from 'UINT64' to 'UINT16', possible loss of data
+  mscstat.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.h(30,47): warning C4244: 'argument': conversion from 'UINT64' to 'UINT16', possible loss of data
+  NetworkMetricProvider.cpp
+  ProcessMetricProvider.cpp
+  RAMMetricProvider.cpp
+  StorageMetricProvider.cpp
+  Utils.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.h(30,47): warning C4244: 'argument': conversion from 'UINT64' to 'UINT16', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.cpp(15,31): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.cpp(15,31): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetAppDataPath'
+  Generating Code...
+  mscstat.vcxproj -> C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Debug\mscstat.exe
