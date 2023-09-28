@@ -1,11 +1,12 @@
 #pragma once
 #include "MetricProviderBase.h"
+#include <codecvt>
 
 // All units are in bytes/sec
 class NetworkMetricProvider : public MetricProviderBase {
 	struct Metric {
 		std::string name;
-		UINT16 counter;
+		UINT16 counter = 0;
 		double bytesSentPerSecond = 0;      // bytes/sec
 		double bytesReceivedPerSecond = 0;  // bytes/sec
 		double bytesTotalPerSecond = 0;     // bytes/sec
@@ -18,11 +19,12 @@ class NetworkMetricProvider : public MetricProviderBase {
 	};
 
 public:
-	NetworkMetricProvider() {
+	NetworkMetricProvider(std::string interfaceName) {
+		this->name = interfaceName;
 		// Create a table for this metric provider if it does not exist
 		DataManager::GetInstance().CreateTable("NetworkMetricProvider", " \
             id INTEGER PRIMARY KEY, \
-            name TEXT DEFAULT \"Network\", \
+            name TEXT DEFAULT \"" + interfaceName + "\", \
             counter INTEGER NOT NULL, \
             bytesSentPerSecond REAL DEFAULT 0, \
             bytesReceivedPerSecond REAL DEFAULT 0, \
@@ -40,15 +42,29 @@ public:
 			throw std::runtime_error("Failed to open PDH query.");
 		}
 
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Bytes Sent/sec", 0, &bytesSentCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Bytes Received/sec", 0, &bytesReceivedCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Bytes Total/sec", 0, &bytesTotalCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Current Bandwidth", 0, &currentBandwidthCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Packets Received/sec", 0, &packetsReceivedCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Packets Sent/sec", 0, &packetsSentCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Connections Active", 0, &connectionsActiveCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Connections Established", 0, &connectionsEstablishedCounter);
-		PdhAddEnglishCounter(queryHandle, L"\\Network Interface(*)\\Network Error/sec", 0, &networkErrorsCounter);
+		// Create a wstring using wstring_convert
+		std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
+		std::wstring wideString = converter.from_bytes(name);
+
+		std::wstring bytesSentName = L"\\Network Interface(" + wideString + L")\\Bytes Sent/sec";
+		std::wstring bytesRecivedName = L"\\Network Interface(" + wideString + L")\\Bytes Received/sec";
+		std::wstring bytesTotalName = L"\\Network Interface(" + wideString + L")\\Bytes Total/sec";
+		std::wstring currentBandwidthName = L"\\Network Interface(" + wideString + L")\\Current Bandwidth";
+		std::wstring packetsRecivedName = L"\\Network Interface(" + wideString + L")\\Packets Received/sec";
+		std::wstring packetsSentName = L"\\Network Interface(" + wideString + L")\\Packets Sent/sec";
+		std::wstring connectionsActiveName = L"\\Network Interface(" + wideString + L")\\Connections Active";
+		std::wstring connectionsEstablishedName = L"\\Network Interface(" + wideString + L")\\Connections Established";
+		std::wstring networkErrorName = L"\\Network Interface(" + wideString + L")\\Network Error/sec";
+
+		PdhAddEnglishCounter(queryHandle, bytesSentName.c_str(), 0, &bytesSentCounter);
+		PdhAddEnglishCounter(queryHandle, bytesRecivedName.c_str(), 0, &bytesReceivedCounter);
+		PdhAddEnglishCounter(queryHandle, bytesTotalName.c_str(), 0, &bytesTotalCounter);
+		PdhAddEnglishCounter(queryHandle, currentBandwidthName.c_str(), 0, &currentBandwidthCounter);
+		PdhAddEnglishCounter(queryHandle, packetsRecivedName.c_str(), 0, &packetsReceivedCounter);
+		PdhAddEnglishCounter(queryHandle, packetsSentName.c_str(), 0, &packetsSentCounter);
+		PdhAddEnglishCounter(queryHandle, connectionsActiveName.c_str(), 0, &connectionsActiveCounter);
+		PdhAddEnglishCounter(queryHandle, connectionsEstablishedName.c_str(), 0, &connectionsEstablishedCounter);
+		PdhAddEnglishCounter(queryHandle, networkErrorName.c_str(), 0, &networkErrorsCounter);
 
 		PdhCollectQueryData(queryHandle);
 	}
@@ -56,7 +72,7 @@ public:
 	virtual void RetrieveMetricValue(UINT16 counter) override {
 		// Save the data to the database
 		latestValue = std::make_shared<Metric>();
-		latestValue->name = "Network";
+		latestValue->name = name;
 		latestValue->counter = counter;
 
 		if (CollectData()) {
@@ -110,6 +126,5 @@ private:
 	PDH_HCOUNTER networkErrorsCounter;
 
 	std::shared_ptr<Metric> latestValue = NULL;
+	std::string name;
 };
-
-

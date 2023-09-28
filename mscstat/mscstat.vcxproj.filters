@@ -57,6 +57,15 @@
     <ClCompile Include="ProcessMetricProvider.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="ScriptManager.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Server.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MyScript.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="MetricProviderBase.h">
@@ -98,5 +107,19 @@
     <ClInclude Include="ProcessMetricProvider.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="ScriptManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Server.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MyScript.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <CopyFileToFolders Include="cert.pem" />
+    <CopyFileToFolders Include="graph.html" />
+    <CopyFileToFolders Include="key.pem" />
   </ItemGroup>
 </Project>

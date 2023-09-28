@@ -31,7 +31,7 @@ public:
             }
             counter++;
 
-            const auto interval = intervalMS_ > 1000 ? 1000 : intervalMS_;
+            const auto interval = intervalMS_ < 1000 ? 1000 : intervalMS_;
             LogManager::GetInstance().LogInfo("Metrics Fetched: {0}. Next fetch in {1} seconds. ", counter, interval / 1000);
             std::this_thread::sleep_for(std::chrono::milliseconds(interval));
         }

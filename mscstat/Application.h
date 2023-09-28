@@ -1,12 +1,15 @@
 #pragma once
 #include <string>
 #include <csignal>
+#include <stdio.h>
 
 #include "LogManager.h"
 #include "ConfigManager.h"
 #include "ThreadManager.h"
 #include "DataManager.h"
 #include "MetricsManager.h"
+#include "ScriptManager.h"
+#include "Server.h"
 
 class Application
 {
@@ -25,7 +28,7 @@ public:
     }
 
     ~Application() {
-        logManager->LogInfo("Application Ended!");
+        std::cout << "Application Ended!";
     }
 
     void Initialize();
@@ -69,6 +72,9 @@ public:
     LogManager* logManager;
     MetricsManager* metricsManager;
     ThreadManager* threadManager;
+    ScriptManager* scriptManager;
+
+    Server* server;
 
     static std::shared_ptr<Application> theApp;
 };

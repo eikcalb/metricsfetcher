@@ -7,7 +7,9 @@ class ProcessMetricProvider: public MetricProviderBase {
         UINT16 counter;
         double read = 0;
         double write = 0;
-        double transferRate = 0;
+        double processCount = 0;
+        std::string activeProcess= "";
+        std::string activeWindow = "";
     };
 
     public:
@@ -17,9 +19,11 @@ class ProcessMetricProvider: public MetricProviderBase {
             id INTEGER PRIMARY KEY, \
             name TEXT DEFAULT \"Process\", \
             counter INTEGER NOT NULL, \
-            read REAL DEFAULT 0, \
-            write REAL DEFAULT 0, \
-            transferRate REAL DEFAULT 0, \
+            processCount INTEGER DEFAULT 0, \
+            activeProcess TEXT DEFAULT \"\", \
+            activeWindow TEXT DEFAULT \"\", \
+            bytesReadPerSecond REAL DEFAULT 0, \
+            bytesWrittenPerSecond REAL DEFAULT 0, \
             timestamp INTEGER NOT NULL");
 
             PDH_STATUS status = PdhOpenQuery(nullptr, 0, &queryHandle);
@@ -27,9 +31,10 @@ class ProcessMetricProvider: public MetricProviderBase {
                 throw std::runtime_error("Failed to open PDH query.");
             }
 
-            PdhAddEnglishCounter(queryHandle, L"\\PhysicalDisk(_Total)\\Disk Read Bytes/sec", 0, &diskReadRateCounter);
-            PdhAddEnglishCounter(queryHandle, L"\\PhysicalDisk(_Total)\\Disk Write Bytes/sec", 0, &diskWriteRateCounter);
-            PdhAddEnglishCounter(queryHandle, L"\\PhysicalDisk(_Total)\\Disk Bytes/sec", 0, &totalTransferRateCounter);
+            PdhAddEnglishCounter(queryHandle, L"\\System\\Processes", 0, &processCounter);
+            PdhAddEnglishCounter(queryHandle, L"\\Process(_Total)\\IO Read Bytes/sec", 0, &readRateCounter);
+            PdhAddEnglishCounter(queryHandle, L"\\Process(_Total)\\IO Write Bytes/sec", 0, &writeRateCounter);
+
 
             PdhCollectQueryData(queryHandle);
         }
@@ -37,12 +42,16 @@ class ProcessMetricProvider: public MetricProviderBase {
         virtual void RetrieveMetricValue(UINT16 counter) override {
             // Save the data to the database
             latestValue = std::make_shared<Metric>();
-
-            latestValue->name = "Storage";
+            latestValue->name = "Process";
             latestValue->counter = counter;
-            latestValue->read = GetDiskReadRate();
-            latestValue->write = GetDiskWriteRate();
-            latestValue->transferRate = GetTotalTransferRate();
+
+            if (CollectData()) {
+                latestValue->processCount = GetCounterValue(processCounter);
+                latestValue->activeProcess= Utils::GetActiveProcessTitle();
+                latestValue->activeWindow = Utils::GetActiveWindowTitle();
+                latestValue->read = GetCounterValue(readRateCounter);
+                latestValue->write = GetCounterValue(writeRateCounter);
+            }
 
             Persist();
         }
@@ -56,9 +65,11 @@ class ProcessMetricProvider: public MetricProviderBase {
             stream << "NULL, "
                 << "\"" << latestValue->name << "\", "
                 << latestValue->counter << ", "
+                << latestValue->processCount << ", "
+                << "\"" << latestValue->activeProcess<< "\"" << ", "
+                << "\"" << latestValue->activeWindow << "\"" << ", "
                 << latestValue->read << ", "
                 << latestValue->write << ", "
-                << latestValue->transferRate << ", "
                 << std::chrono::duration_cast<std::chrono::seconds>(p1.time_since_epoch()).count();
             std::string sqlString = stream.str();
 
@@ -66,22 +77,9 @@ class ProcessMetricProvider: public MetricProviderBase {
         };
 
     private:
-        double GetDiskReadRate() {
-            return GetCounterValue(diskReadRateCounter);
-        }
-
-        double GetDiskWriteRate() {
-            return GetCounterValue(diskWriteRateCounter);
-        }
-
-        double GetTotalTransferRate() {
-            return GetCounterValue(totalTransferRateCounter);
-        }
-
-    private:
-        PDH_HCOUNTER diskReadRateCounter;
-        PDH_HCOUNTER diskWriteRateCounter;
-        PDH_HCOUNTER totalTransferRateCounter;
+        PDH_HCOUNTER processCounter;
+        PDH_HCOUNTER readRateCounter;
+        PDH_HCOUNTER writeRateCounter;
 
         std::shared_ptr<Metric> latestValue = NULL;
 };

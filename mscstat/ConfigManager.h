@@ -8,7 +8,7 @@ struct MyConfig {
     // Default pool size is 2.
     int poolSize = 2;
     // Default interval for fetching each metric on a computer is 10 seconds
-    int metricFetchInterval = 10 * 10;
+    int metricFetchInterval = 10 * 1000;
 };
 
 class ConfigManager {
