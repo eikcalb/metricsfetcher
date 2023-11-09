@@ -8,6 +8,8 @@
 
 class MetricProviderBase {
 public:
+    virtual std::string GetName() = 0;
+
     virtual ~MetricProviderBase() {
         PdhCloseQuery(queryHandle);
     }

@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="mscstat.cpp">
+    <ClCompile Include="metricsFetcher.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="MetricProviderBase.cpp">
@@ -118,8 +118,12 @@
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
-    <CopyFileToFolders Include="cert.pem" />
     <CopyFileToFolders Include="graph.html" />
-    <CopyFileToFolders Include="key.pem" />
+    <CopyFileToFolders Include="dh768.pem" />
+    <CopyFileToFolders Include="server.crt" />
+    <CopyFileToFolders Include="server.key" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram.cd" />
   </ItemGroup>
 </Project>

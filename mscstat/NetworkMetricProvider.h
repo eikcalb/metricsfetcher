@@ -1,6 +1,9 @@
 #pragma once
-#include "MetricProviderBase.h"
+#include <locale>
 #include <codecvt>
+
+#include "MetricProviderBase.h"
+#include "Utils.h"
 
 // All units are in bytes/sec
 class NetworkMetricProvider : public MetricProviderBase {
@@ -43,8 +46,7 @@ public:
 		}
 
 		// Create a wstring using wstring_convert
-		std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
-		std::wstring wideString = converter.from_bytes(name);
+        std::wstring wideString = Utils::StringToWstring(name);
 
 		std::wstring bytesSentName = L"\\Network Interface(" + wideString + L")\\Bytes Sent/sec";
 		std::wstring bytesRecivedName = L"\\Network Interface(" + wideString + L")\\Bytes Received/sec";
@@ -68,6 +70,8 @@ public:
 
 		PdhCollectQueryData(queryHandle);
 	}
+
+    virtual std::string GetName() { return  name; }
 
 	virtual void RetrieveMetricValue(UINT16 counter) override {
 		// Save the data to the database

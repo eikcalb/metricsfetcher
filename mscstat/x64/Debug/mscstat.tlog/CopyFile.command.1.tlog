@@ -1,6 +1,8 @@
 ^C:\USERS\ONOME ISRAEL AGWA\SOURCE\REPOS\MSCSTAT\MSCSTAT\GRAPH.HTML
 C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Debug\graph.html
-^C:\USERS\ONOME ISRAEL AGWA\SOURCE\REPOS\MSCSTAT\MSCSTAT\CERT.PEM
-C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Debug\cert.pem
-^C:\USERS\ONOME ISRAEL AGWA\SOURCE\REPOS\MSCSTAT\MSCSTAT\KEY.PEM
-C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Debug\key.pem
+^C:\USERS\ONOME ISRAEL AGWA\SOURCE\REPOS\MSCSTAT\MSCSTAT\DH768.PEM
+C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Debug\dh768.pem
+^C:\USERS\ONOME ISRAEL AGWA\SOURCE\REPOS\MSCSTAT\MSCSTAT\SERVER.CRT
+C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Debug\server.crt
+^C:\USERS\ONOME ISRAEL AGWA\SOURCE\REPOS\MSCSTAT\MSCSTAT\SERVER.KEY
+C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Debug\server.key

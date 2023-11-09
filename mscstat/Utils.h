@@ -7,8 +7,9 @@
 #include <vector>
 #include <iphlpapi.h>
 #include <functional>
-#include "LogManager.h"
 #include <codecvt>
+
+#include "LogManager.h"
 
 class Utils
 {
@@ -73,9 +74,7 @@ public:
         if (length == 0) {
             return "";
         }
-
-        std::wstring_convert<std::codecvt_utf8<wchar_t>> converter;
-        return converter.to_bytes(buffer);
+        return WideStringToString(buffer, length);
     }
 
     static void EnumNetworkInterfaces(std::function<void(std::string)> callback) {
@@ -111,6 +110,29 @@ public:
         if (pAdapterInfo) {
             free(pAdapterInfo);
         }
+    }
+
+    static std::string WideStringToString(const wchar_t* wideStr) {
+        int len = WideCharToMultiByte(CP_UTF8, 0, wideStr, -1, nullptr, 0, nullptr, nullptr);
+
+        return WideStringToString(wideStr, len);
+    }
+
+    static std::wstring StringToWstring(const std::string& str) {
+        int wstrLen = MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, NULL, 0);
+        std::wstring wstr(wstrLen, 0);
+        MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, &wstr[0], wstrLen);
+        return wstr;
+    }
+
+    static std::string WideStringToString(const wchar_t* wideStr, const int& len) {
+        if (len > 0) {
+            std::string result(len, 0);
+            WideCharToMultiByte(CP_UTF8, 0, wideStr, -1, &result[0], len, nullptr, nullptr);
+            return result;
+        }
+
+        return "";
     }
 };
 

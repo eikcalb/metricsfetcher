@@ -3,62 +3,137 @@
 #include <atomic>
 #include <memory>
 #include <restbed>
+#include <cstdio>
+#include <cstdarg>
 #include <cstdlib>
+#include <stdarg.h>
 #include <fstream>
 #include <streambuf>
 #include <iostream>
+#include <rapidjson/document.h>
 
-using namespace std;
+#include "ConfigManager.h"
+#include "LogManager.h"
+
+using namespace rapidjson;
 using namespace restbed;
 
 class Server
 {
 
 private:
-	void getIndexHandler(const shared_ptr< Session >& session);
-	void getGraphHandler(const shared_ptr< Session >& session);
-	void getMetricHandler(const shared_ptr< Session >& session);
+    void getIndexHandler(const std::shared_ptr< Session >& session);
+    void getGraphHandler(const std::shared_ptr< Session >& session);
+    void getMetricHandler(const std::shared_ptr< Session >& session);
+    
+    void getConfigHandler(const std::shared_ptr< Session >& session);
+    void putConfigHandler(const std::shared_ptr< Session >& session);
+
+    void getScriptsHandler(const std::shared_ptr< Session >& session);
+    void postScriptHandler(const std::shared_ptr< Session >& session);
+    void deleteScriptHandler(const std::shared_ptr< Session >& session);
+
+    void getHealthHandler(const std::shared_ptr< Session >& session);
 
 public:
-	Server() {
-		// Initialize the Restbed service
-		service = make_shared<Service>();
-	}
+    Server(USHORT _port) {
+        port = _port;
+        // Initialize the Restbed service
+        service = std::make_shared<Service>();
+        service->set_error_handler(errorHandler);
+    }
 
-	void Start() {
-		auto resource = make_shared< Resource >();
-		resource->set_path("/");
-		resource->set_method_handler("GET", [&](const shared_ptr< Session >& session) { getIndexHandler(session); });
+    static void get_method_handler(const std::shared_ptr< Session > session)
+    {
+        const std::string resp = "Hello, World!";
+        session->close(OK, resp, {
+            { "Content-Type", "text/plain"},
+            { "Content-Length", std::to_string(resp.length()) }
+            });
+    }
 
-		auto resource2 = make_shared< Resource >();
-		resource2->set_path("/graph/{metricName: [a-z]*}");
-		resource2->set_method_handler("GET", [&](const shared_ptr< Session >& session) { getGraphHandler(session); });
+    void Start() {
+        auto settings = std::make_shared< Settings >();
+        settings->set_port(port);
+        settings->set_bind_address("127.0.0.1");
+        settings->set_default_header("Connection", "keep-alive");
+        settings->set_default_header("User-Agent", "eikcalb server: 1.0");
 
-		auto resource3 = make_shared< Resource >();
-		resource3->set_path("/metric/{metricName: [a-z]*}");
-		resource3->set_method_handler("GET", [&](const shared_ptr< Session >& session) { getMetricHandler(session); });
+        LogManager::GetInstance().LogInfo("Starting server on port: {0}", settings->get_port());
 
-		auto settings = make_shared< Settings >();
-		settings->set_port(1284);
-		settings->set_default_header("Connection", "close");
+        auto sslSettings = std::make_shared<SSLSettings>();
+        sslSettings->set_http_disabled(false);
+        //sslSettings->set_tlsv12_enabled(true);
+        //sslSettings->set_tlsv11_enabled(true);
+        //sslSettings->set_private_key(Uri("file://./server.key"));
+        //sslSettings->set_certificate(Uri("file://./server.crt"));
+        //sslSettings->set_temporary_diffie_hellman(Uri("file://./dh768.pem"));
+        settings->set_ssl_settings(sslSettings);
 
-		auto sslSettings = make_shared< SSLSettings >();
-		sslSettings->set_http_disabled(false);
-		//sslSettings->set_passphrase("test");
-		//sslSettings->set_private_key(Uri("file://./key.pem"));
-		//sslSettings->set_certificate(Uri("file://./cert.pem"));
-		//settings->set_ssl_settings(sslSettings);
+#pragma region SetupRoutes
+        // Web routes
+        service->publish(createRouteResource("/", "GET", [&](const std::shared_ptr< Session >& session) {
+            getIndexHandler(session);
+            }));
+        service->publish(createRouteResource("/graph/{metricName: [a-z]*}", "GET", [&](const std::shared_ptr< Session >& session) { getGraphHandler(session); }));
+        service->publish(createRouteResource("/metric/{metricName: [a-z]*}", "GET", [&](const std::shared_ptr< Session >& session) { getMetricHandler(session); }));
 
-		service->publish(resource);
-		service->start(settings);
-	}
+        // API routes
+        service->publish(createRouteResource("/api/config", "GET", [&](const std::shared_ptr< Session >& session) { getConfigHandler(session); }));
+        service->publish(createRouteResource("/api/config/save", "PUT", [&](const std::shared_ptr< Session >& session) { putConfigHandler(session); }));
+       
+        service->publish(createRouteResource("/api/script", "GET", [&](const std::shared_ptr< Session >& session) { getScriptsHandler(session); }));
+        service->publish(createRouteResource("/api/script/save", "POST", [&](const std::shared_ptr< Session >& session) { postScriptHandler(session); }));
+        service->publish(createRouteResource("/api/script/delete/{name: .*}", "DELETE", [&](const std::shared_ptr< Session >& session) { deleteScriptHandler(session); }));
 
-	// Stop the server
-	void Stop() {
-		service->stop();
-	}
+        service->publish(createRouteResource("/api/health", "GET", [&](const std::shared_ptr< Session >& session) { getHealthHandler(session); }));
+
+#pragma endregion
+
+        service->start(settings);
+    }
+
+    // Stop the server
+    void Stop() {
+        service->stop();
+    }
 
 private:
-	std::shared_ptr<restbed::Service> service;
+    static void errorHandler(const int, const std::exception& ex, const std::shared_ptr< Session > session)
+    {
+
+        LogManager::GetInstance().LogError("Server Error: {0}", ex.what());
+        if (session && session->is_open()) {
+            session->close(500, "Server Error", {
+                { "Content-Type", "application/json"},
+                { "Content-Length", "36" } });
+        }
+    }
+
+    static std::shared_ptr<Resource> createRouteResource(const std::string path, const std::string method, const std::function< void(const std::shared_ptr< Session >) >& callback)
+    {
+        auto resource = std::make_shared< Resource >();
+        resource->set_path(path);
+        resource->set_method_handler(method, callback);
+        resource->set_default_header("Access-Control-Allow-Origin", "*");
+        resource->set_default_header("Access-Control-Allow-Headers", "*");
+        //resource->set_default_header("Access-Control-Allow-Methods", "GET, POST, OPTIONS, PUT, DELETE");
+
+        resource->set_method_handler("OPTIONS", [&, method](const std::shared_ptr< Session >& session) {
+            if (session->get_request()->get_method() == "OPTIONS") {
+                session->close(200, "OK", {
+                    { "Access-Control-Allow-Methods", method + ", OPTIONS" },
+                    });
+            }
+            }
+        );
+
+        return resource;
+    }
+
+private:
+    USHORT port;
+
+    std::shared_ptr<restbed::Service> service;
 };
 

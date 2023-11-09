@@ -1,10 +1,14 @@
 #pragma once
+#include <algorithm>
 #include <iostream>
 #include <vector>
 #include <memory>
 #include <chrono>
 #include <thread>
 #include <mutex>
+#include <rapidjson/document.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/writer.h>
 
 #include "LogManager.h"
 #include "MetricProviderBase.h"
@@ -18,24 +22,7 @@ public:
     }
 
     // Start collecting metrics at a specified interval
-    void StartMetricsCollection() {
-        // Set the flag to indicate that metrics collection is active
-        isCollectingMetrics_ = true;
-
-        static UINT64 counter = 0;
-
-        // Start a loop to collect metrics at the specified interval
-        while (isCollectingMetrics_) {
-            for (const auto& provider : metricProviders_) {
-                provider->RetrieveMetricValue(counter);
-            }
-            counter++;
-
-            const auto interval = intervalMS_ < 1000 ? 1000 : intervalMS_;
-            LogManager::GetInstance().LogInfo("Metrics Fetched: {0}. Next fetch in {1} seconds. ", counter, interval / 1000);
-            std::this_thread::sleep_for(std::chrono::milliseconds(interval));
-        }
-    }
+    void StartMetricsCollection();
 
     // Stop collecting metrics
     void StopMetricsCollection() {
@@ -47,8 +34,52 @@ public:
         metricProviders_.push_back(std::move(provider));
     }
 
+    std::string GetInfoAsJSON() {
+        const auto metricsActive = IsActive();
+        const auto providers = GetActiveProviders();
+
+        // Create a RapidJSON Document
+        rapidjson::Document doc;
+        doc.SetObject();
+
+        rapidjson::Value isActive_;
+        isActive_.SetBool(metricsActive);
+        doc.AddMember("isActive", metricsActive, doc.GetAllocator());
+
+        rapidjson::Value jsonArray(rapidjson::kArrayType);
+        for (const auto& provider : providers) {
+
+            rapidjson::Value name_;
+            name_.SetString(provider.c_str(), doc.GetAllocator());
+
+            jsonArray.PushBack(name_, doc.GetAllocator());
+        }
+
+        doc.AddMember("providers", jsonArray, doc.GetAllocator());
+
+        // Serialize the Document to a JSON string
+        rapidjson::StringBuffer buffer;
+        rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+        buffer.Flush();
+        doc.Accept(writer);
+
+        return buffer.GetString();
+    }
+
 private:
-    MetricsManager(int intervalMS): intervalMS_(intervalMS) {} // Private constructor to prevent external instantiation
+    bool IsActive() { return isCollectingMetrics_; }
+
+    std::vector<std::string> GetActiveProviders() {
+        std::vector<std::string> providerNames;
+        for (const auto& provider : metricProviders_) {
+            providerNames.push_back(provider->GetName());
+        }
+
+        return providerNames;
+    }
+
+private:
+    MetricsManager(int intervalMS) : intervalMS_(intervalMS) {} // Private constructor to prevent external instantiation
     std::vector<std::unique_ptr<MetricProviderBase>> metricProviders_;
     bool isCollectingMetrics_ = false; // Flag to control metrics collection
     int intervalMS_;

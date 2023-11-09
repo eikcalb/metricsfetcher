@@ -15,6 +15,8 @@ class Application
 {
 public:
     void Run();
+    void Initialize();
+    void Stop();
 
     static Application& CreateInstance() {
         if (!theApp) {
@@ -30,8 +32,6 @@ public:
     ~Application() {
         std::cout << "Application Ended!";
     }
-
-    void Initialize();
 
 private:
     static void SignalHandler(int signal) {
@@ -56,16 +56,24 @@ private:
             logManager->LogInfo("Default config will be used.");
             return "";
         }
-
-        return resultSet.front().GetString(2);
+        auto ss = resultSet.front();
+        return ss.GetString("value");
     }
 
+public:
+    bool SaveConfigData(const std::string & jsonString) {
+        auto newConfig = configManager->ParseJSONString(jsonString);
+        logManager->LogInfo("Updating application configuration.");
+        logManager->LogInfo("Application configuration has been set to: {0}", jsonString);
+
+        return dataManager->Upsert(tableName, "\"key\", \"value\"", "\"config\", \'" + jsonString + "\'");
+    }
 
 private:
     static volatile std::sig_atomic_t g_signal_flag;
 public:
-    std::string name = "MSC Fetcher";
-    std::string tableName = "MSC_Fetcher";
+    std::string name = "Metrics Fetcher";
+    std::string tableName = "Metrics_Fetcher";
 
     ConfigManager* configManager;
     DataManager* dataManager;

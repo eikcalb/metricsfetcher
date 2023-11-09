@@ -40,6 +40,8 @@ public:
 		PdhCollectQueryData(queryHandle);
 	}
 
+    virtual std::string GetName() { return  "CPUMetricProvider"; }
+
 	virtual void RetrieveMetricValue(UINT16 counter) override {
 		// Save the data to the database
 		latestValue = std::make_shared<Metric>();

@@ -46,8 +46,13 @@ public:
         }
     }
 
+    void Stop() {
+        should_stop.store(true);
+    }
+
 private:
     int poolSize;
+    std::atomic<bool> should_stop;
     std::vector<std::thread> threads;
     std::map<int, std::vector<std::function<void()>>> tasks;
     std::mutex mutex;
@@ -55,6 +60,7 @@ private:
     std::default_random_engine generator; // Random number generator
 
     ThreadManager(int poolSize) : poolSize(poolSize) {
+        should_stop.store(false);
         // Initialize the thread pool
         for (int i = 0; i < poolSize; ++i) {
             threads.emplace_back(std::bind(&ThreadManager::ThreadFunction, this, i));
@@ -66,13 +72,18 @@ private:
 
     // Function executed by each thread in the pool
     void ThreadFunction(int id) {
-        while (true) {
+        while (!should_stop.load()) {
             std::function<void()> task;
             {
                 std::unique_lock<std::mutex> lock(mutex);
 
                 // Wait for a task if the task queue is empty
                 condition.wait(lock, [this, id] {
+                    // If we have a signal to exit, we should stop waiting
+                    if (should_stop.load()) {
+                        return true;
+                    }
+
                     return !tasks[id].empty();
                 });
 
@@ -88,5 +99,7 @@ private:
                 task();
             }
         }
+
+        condition.notify_all();
     }
 };

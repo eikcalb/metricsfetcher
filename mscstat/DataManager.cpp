@@ -44,9 +44,10 @@ std::vector<Row> DataManager::ExecuteSelect(const std::string& sql) {
 
     // Execute the SELECT statement
     while (sqlite3_step(stmt) == SQLITE_ROW) {
+        auto columnValue2 = sqlite3_column_text(stmt, 2);
+
         resultData.emplace_back(stmt);
     }
 
-    sqlite3_finalize(stmt);
     return resultData;
 }
