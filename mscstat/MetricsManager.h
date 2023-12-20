@@ -26,15 +26,15 @@ public:
 
     // Stop collecting metrics
     void StopMetricsCollection() {
-        isCollectingMetrics_ = false;
+        isCollectingMetrics_.store(false);
     }
 
     // Add metric providers to the manager
     void AddMetricProvider(std::unique_ptr<MetricProviderBase> provider) {
-        metricProviders_.push_back(std::move(provider));
+        metricProviders_.emplace_back(std::move(provider));
     }
 
-    std::string GetInfoAsJSON() {
+    std::string GetInfoAsJSON() const {
         const auto metricsActive = IsActive();
         const auto providers = GetActiveProviders();
 
@@ -44,11 +44,10 @@ public:
 
         rapidjson::Value isActive_;
         isActive_.SetBool(metricsActive);
-        doc.AddMember("isActive", metricsActive, doc.GetAllocator());
+        doc.AddMember("isActive", isActive_, doc.GetAllocator());
 
         rapidjson::Value jsonArray(rapidjson::kArrayType);
         for (const auto& provider : providers) {
-
             rapidjson::Value name_;
             name_.SetString(provider.c_str(), doc.GetAllocator());
 
@@ -66,10 +65,38 @@ public:
         return buffer.GetString();
     }
 
-private:
-    bool IsActive() { return isCollectingMetrics_; }
+    std::string GetProviderDataJSON(const UINT8 count) const;
 
-    std::vector<std::string> GetActiveProviders() {
+    std::string GetProviderAggregateDataJSON(const std::string column, const bool isCustom, const std::string name = "") const;
+
+    std::string GetAvailableCountersJSON() {
+        // Create a RapidJSON Document
+        rapidjson::Document doc;
+        doc.SetObject();
+
+        rapidjson::Value jsonArray(rapidjson::kArrayType);
+        for (const auto& counter : *availableCounters) {
+            rapidjson::Value name_;
+            name_.SetString(counter.c_str(), doc.GetAllocator());
+
+            jsonArray.PushBack(name_, doc.GetAllocator());
+        }
+
+        doc.AddMember("counters", jsonArray, doc.GetAllocator());
+
+        // Serialize the Document to a JSON string
+        rapidjson::StringBuffer buffer;
+        rapidjson::Writer<rapidjson::StringBuffer> writer(buffer);
+        buffer.Flush();
+        doc.Accept(writer);
+
+        return buffer.GetString();
+    }
+
+private:
+    bool IsActive() const { return isCollectingMetrics_.load(); }
+
+    std::vector<std::string> GetActiveProviders() const {
         std::vector<std::string> providerNames;
         for (const auto& provider : metricProviders_) {
             providerNames.push_back(provider->GetName());
@@ -79,8 +106,14 @@ private:
     }
 
 private:
-    MetricsManager(int intervalMS) : intervalMS_(intervalMS) {} // Private constructor to prevent external instantiation
+    MetricsManager(int intervalMS) : intervalMS_(intervalMS) {
+        // Here we will get the list of available counters on the computer
+        availableCounters = std::make_shared<std::vector<std::string>>(Utils::ExecuteShellCommand("typeperf -qx"));
+    } // Private constructor to prevent external instantiation
     std::vector<std::unique_ptr<MetricProviderBase>> metricProviders_;
-    bool isCollectingMetrics_ = false; // Flag to control metrics collection
+    std::atomic<bool> isCollectingMetrics_ = false; // Flag to control metrics collection
+    std::atomic<UINT64> counter = 0;
     int intervalMS_;
+
+    std::shared_ptr<std::vector<std::string>> availableCounters;
 };

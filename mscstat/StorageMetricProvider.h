@@ -35,7 +35,57 @@ public:
         PdhCollectQueryData(queryHandle);
     }
 
-    virtual std::string GetName() { return  "StorageMetricProvider"; }
+
+    virtual rapidjson::Value GetDataJSON(rapidjson::Document& doc, const UINT8 count) const {
+        // Fetch the most recent data, up to `count`
+        rapidjson::Value response(rapidjson::kArrayType);
+
+        const auto rows = DataManager::GetInstance().Select("StorageMetricProvider", "1=1 ORDER BY id DESC LIMIT " + std::to_string(count));
+        for (auto& row : rows) {
+            rapidjson::Value obj(rapidjson::kObjectType);
+
+            auto id = row.GetInt("id");
+            auto counter = row.GetInt("counter");
+            auto timestamp = row.GetInt("timestamp");
+
+            auto read = row.GetDouble("read");
+            auto write = row.GetDouble("write");
+            auto transferRate = row.GetDouble("transferRate");
+
+            obj.AddMember("id", Utils::ConvertIntToJSONValue(id, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("counter", Utils::ConvertIntToJSONValue(counter, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("timestamp", Utils::ConvertIntToJSONValue(timestamp, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("read", Utils::ConvertDoubleToJSONValue(read, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("write", Utils::ConvertDoubleToJSONValue(write, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("transferRate", Utils::ConvertDoubleToJSONValue(transferRate, doc.GetAllocator()), doc.GetAllocator());
+
+            response.PushBack(obj, doc.GetAllocator());
+        }
+
+        return response;
+    };
+
+    virtual rapidjson::Value GetAggregateDataJSON(rapidjson::Document& doc, const std::string column) const {
+        const auto& rows = DataManager::GetInstance().SelectAggregate("StorageMetricProvider", column);
+        rapidjson::Value obj(rapidjson::kObjectType);
+
+        const auto& row = rows[0];
+        auto max = row.GetDouble("max");
+        auto min = row.GetDouble("min");
+        auto avg = row.GetDouble("avg");
+        auto total = row.GetDouble("total");
+        auto count = row.GetInt("count");
+
+        obj.AddMember("max", Utils::ConvertDoubleToJSONValue(max, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("min", Utils::ConvertDoubleToJSONValue(min, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("avg", Utils::ConvertDoubleToJSONValue(avg, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("total", Utils::ConvertDoubleToJSONValue(total, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("count", Utils::ConvertDoubleToJSONValue(count, doc.GetAllocator()), doc.GetAllocator());
+
+        return obj;
+    };
+
+    virtual std::string GetName() { return  "Storage"; }
 
     virtual void RetrieveMetricValue(UINT16 counter) override {
         // Save the data to the database

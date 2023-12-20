@@ -3,12 +3,21 @@
 #include <pdh.h>
 #include <sstream>
 #include <pdhmsg.h>
+#include <rapidjson/document.h>
+#include <rapidjson/stringbuffer.h>
+#include <rapidjson/writer.h>
 
 #include "DataManager.h"
+#include "Utils.h"
 
 class MetricProviderBase {
 public:
+    virtual rapidjson::Value GetDataJSON(rapidjson::Document& doc, const UINT8 count) const = 0;
+    virtual rapidjson::Value GetAggregateDataJSON(rapidjson::Document& doc, const std::string column) const = 0;
     virtual std::string GetName() = 0;
+    // Returns `true` if this metric supports multiple values in its table.
+    // `false` otherwise.
+    virtual bool IsMulti() { return false; };
 
     virtual ~MetricProviderBase() {
         PdhCloseQuery(queryHandle);

@@ -31,18 +31,20 @@ public:
     // Use threadIndex = -1 to indicate that the task can run on any available thread
     void AddTaskToThread(std::function<void()> task, int threadIndex = ThreadType::RANDOM_THREAD) {
         if (threadIndex == ThreadType::RANDOM_THREAD) {
-            // If threadIndex is -1, randomly select an available thread
-            std::uniform_int_distribution<int> distribution(0, poolSize - 1);
+            // If threadIndex is -1, randomly select an available thread.
+            // We however do not want to use the thread reserved for Metrics
+            // manager for other tasks.
+            std::uniform_int_distribution<int> distribution(ThreadType::METRICS_MANAGER_THREAD + 1, poolSize - 1);
             threadIndex = distribution(generator);
         }
 
         if (threadIndex >= 0 && threadIndex < poolSize) {
-            std::unique_lock<std::mutex> lock(mutex);
-            tasks[threadIndex].push_back(task);
-            condition.notify_one();
+            std::lock_guard<std::mutex> lock(tasksMutex);
+            tasks[threadIndex].emplace_back(task);
+            condition.notify_all();
         }
         else {
-            std::cerr << "Invalid thread index." << std::endl;
+            std::cout << "Invalid thread index." << std::endl;
         }
     }
 
@@ -55,7 +57,7 @@ private:
     std::atomic<bool> should_stop;
     std::vector<std::thread> threads;
     std::map<int, std::vector<std::function<void()>>> tasks;
-    std::mutex mutex;
+    std::mutex tasksMutex;
     std::condition_variable condition;
     std::default_random_engine generator; // Random number generator
 
@@ -72,6 +74,8 @@ private:
 
     // Function executed by each thread in the pool
     void ThreadFunction(int id) {
+        std::mutex mutex;
+
         while (!should_stop.load()) {
             std::function<void()> task;
             {
@@ -88,10 +92,13 @@ private:
                 });
 
                 // Get the next task from this thread's task queue
-                if (!tasks[id].empty()) {
-                    task = tasks[id].back();
-                    tasks[id].pop_back();
+                if (!should_stop.load() && !tasks[id].empty()) {
+                    std::lock_guard<std::mutex> lockTasks(tasksMutex);
+                    task = tasks[id].front();
+                    tasks[id].erase(tasks[id].begin());
                 }
+
+                lock.unlock();
             }
 
             // Execute the task
@@ -100,6 +107,8 @@ private:
             }
         }
 
+        // This will trigger all pending threads waiting when the loop
+        // has been triggered to stop.
         condition.notify_all();
     }
 };

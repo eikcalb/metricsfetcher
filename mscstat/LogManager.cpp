@@ -10,15 +10,18 @@ LogManager::LogManager() {
     auto consoleSink = std::make_shared<spdlog::sinks::wincolor_stdout_sink_mt>();
     auto fileSink = std::make_shared<spdlog::sinks::rotating_file_sink_mt>(Utils::GetAppDataPath() + "\\logs.txt", maxFileSize, maxFiles);
 
-    logger = std::make_shared<spdlog::logger>(app->name, spdlog::sinks_init_list{consoleSink, fileSink});
+    logger = std::make_shared<spdlog::logger>(
+        app->name,
+        spdlog::sinks_init_list{consoleSink, fileSink}
+    );
 
     if (!logger) {
         spdlog::critical("Could not create file logger. Cannot continue application");
         throw std::exception("Failed to initialize logger!");
     }
 
-    spdlog::set_level(spdlog::level::trace);
     spdlog::set_default_logger(logger);
+    spdlog::set_level(spdlog::level::trace);
 
     spdlog::flush_every(std::chrono::seconds(10));
 }

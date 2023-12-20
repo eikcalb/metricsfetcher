@@ -8,12 +8,64 @@
 #include <iphlpapi.h>
 #include <functional>
 #include <codecvt>
+#include <rapidjson/document.h>
 
 #include "LogManager.h"
 
 class Utils
 {
 public:
+    static rapidjson::Value ConvertDoubleToJSONValue(const double& value, rapidjson::Document::AllocatorType& allocator) {
+        rapidjson::Value rapidValue;
+        rapidValue.SetDouble(value);
+
+        return rapidValue;
+    }
+
+    static rapidjson::Value ConvertIntToJSONValue(const int& value, rapidjson::Document::AllocatorType& allocator) {
+        rapidjson::Value rapidValue;
+        rapidValue.SetInt(value);
+
+        return rapidValue;
+    }
+
+    static std::vector<std::string> ExecuteShellCommand(const std::string& command) {
+        std::vector<std::string> output;
+
+        // Open a pipe to the shell process
+        //FILE* pipe = _popen(command.c_str(), "r");
+        FILE* pipe = _popen(("powershell.exe " + command).c_str(), "r");
+
+        if (!pipe) {
+            throw std::runtime_error("Failed to open shell pipe.");
+        }
+
+        try {
+            char buffer[1024];
+
+            while (fgets(buffer, sizeof(buffer), pipe) != nullptr) {
+                output.emplace_back(buffer);
+            }
+        }
+        catch (std::exception e) {
+            _pclose(pipe);
+            LogManager::GetInstance().LogError("Failed to run command.");
+            throw e;
+        }
+
+        // Close the pipe
+        _pclose(pipe);
+
+        // Remove shell comment
+        if (!output.empty()) {
+            output.pop_back();
+            output.pop_back();
+            output.pop_back();
+        }
+
+        return output;
+    }
+
     static std::string GetAppDataPath();
 
     static std::string GetActiveProcessTitle() {
@@ -118,13 +170,6 @@ public:
         return WideStringToString(wideStr, len);
     }
 
-    static std::wstring StringToWstring(const std::string& str) {
-        int wstrLen = MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, NULL, 0);
-        std::wstring wstr(wstrLen, 0);
-        MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, &wstr[0], wstrLen);
-        return wstr;
-    }
-
     static std::string WideStringToString(const wchar_t* wideStr, const int& len) {
         if (len > 0) {
             std::string result(len, 0);
@@ -133,6 +178,13 @@ public:
         }
 
         return "";
+    }
+
+    static std::wstring StringToWstring(const std::string& str) {
+        int wstrLen = MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, NULL, 0);
+        std::wstring wstr(wstrLen, 0);
+        MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, &wstr[0], wstrLen);
+        return wstr;
     }
 };
 

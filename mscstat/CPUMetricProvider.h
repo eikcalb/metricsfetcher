@@ -17,7 +17,7 @@ public:
 		// Create a table for this metric provider if it does not exist
 		DataManager::GetInstance().CreateTable("CPUMetricProvider", " \
             id INTEGER PRIMARY KEY, \
-            name TEXT DEFAULT \"CPU\", \
+            name TEXT DEFAULT \"CPUMetricProvider\", \
             counter INTEGER NOT NULL, \
             usage REAL DEFAULT 0, \
             instructionsRetired REAL DEFAULT 0, \
@@ -40,7 +40,59 @@ public:
 		PdhCollectQueryData(queryHandle);
 	}
 
-    virtual std::string GetName() { return  "CPUMetricProvider"; }
+    virtual rapidjson::Value GetDataJSON(rapidjson::Document& doc, const UINT8 count) const {
+        // Fetch the most recent data, up to `count`
+        rapidjson::Value response(rapidjson::kArrayType);
+
+        const auto& rows = DataManager::GetInstance().Select("CPUMetricProvider", "1=1 ORDER BY id DESC LIMIT " + std::to_string(count));
+        for (auto& row : rows) {
+            rapidjson::Value obj(rapidjson::kObjectType);
+
+            auto id = row.GetInt("id");
+            auto counter = row.GetInt("counter");
+            auto usage = row.GetDouble("usage");
+            auto instructionsRetired = row.GetDouble("instructionsRetired");
+            auto cycles = row.GetDouble("cycles");
+            auto floatingPointOperations = row.GetDouble("floatingPointOperations");
+            auto temperature = row.GetDouble("temperature");
+            auto timestamp = row.GetInt("timestamp");
+
+            obj.AddMember("id", Utils::ConvertIntToJSONValue(id, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("counter", Utils::ConvertIntToJSONValue(counter, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("usage", Utils::ConvertDoubleToJSONValue(usage, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("instructionsRetired", Utils::ConvertDoubleToJSONValue(instructionsRetired, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("cycles", Utils::ConvertDoubleToJSONValue(cycles, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("floatingPointOperations", Utils::ConvertDoubleToJSONValue(floatingPointOperations, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("temperature", Utils::ConvertDoubleToJSONValue(temperature, doc.GetAllocator()), doc.GetAllocator());
+            obj.AddMember("timestamp", Utils::ConvertIntToJSONValue(timestamp, doc.GetAllocator()), doc.GetAllocator());
+
+            response.PushBack(obj, doc.GetAllocator());
+        }
+
+        return response;
+    };
+
+    virtual rapidjson::Value GetAggregateDataJSON(rapidjson::Document& doc, const std::string column) const {
+        const auto& rows = DataManager::GetInstance().SelectAggregate("CPUMetricProvider", column);
+        rapidjson::Value obj(rapidjson::kObjectType);
+
+        const auto& row = rows[0];
+        auto max = row.GetDouble("max");
+        auto min = row.GetDouble("min");
+        auto avg = row.GetDouble("avg");
+        auto total = row.GetDouble("total");
+        auto count = row.GetInt("count");
+
+        obj.AddMember("max", Utils::ConvertDoubleToJSONValue(max, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("min", Utils::ConvertDoubleToJSONValue(min, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("avg", Utils::ConvertDoubleToJSONValue(avg, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("total", Utils::ConvertDoubleToJSONValue(total, doc.GetAllocator()), doc.GetAllocator());
+        obj.AddMember("count", Utils::ConvertDoubleToJSONValue(count, doc.GetAllocator()), doc.GetAllocator());
+
+        return obj;
+    };
+
+    virtual std::string GetName() { return  "CPU"; }
 
 	virtual void RetrieveMetricValue(UINT16 counter) override {
 		// Save the data to the database

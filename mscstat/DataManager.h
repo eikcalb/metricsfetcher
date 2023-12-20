@@ -115,6 +115,20 @@ public:
         return ExecuteSQLStatement(upsertSQL);
     }
 
+    std::vector<Row> SelectAggregate(const std::string& tableName, const std::string& column, const std::string& condition = "") {
+        std::string selectSQL = "\
+            SELECT \
+            MAX(CAST(" + column + " AS REAL)) AS max, \
+            MIN(CAST(" + column + " AS REAL)) AS min, \
+            AVG(CAST(" + column + " AS REAL)) AS avg, \
+            TOTAL(CAST(" + column + " AS REAL)) AS total, \
+            COUNT(" + column + ") AS count FROM " + tableName;
+        if (!condition.empty()) {
+            selectSQL += " WHERE " + condition;
+        }
+        return ExecuteSelect(selectSQL);
+    }
+
     std::vector<Row> Select(const std::string& tableName, const std::string& condition = "") {
         std::string selectSQL = "SELECT * FROM " + tableName;
         if (!condition.empty()) {

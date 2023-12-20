@@ -147,7 +147,7 @@
     <ClCompile Include="MetricProviderBase.cpp" />
     <ClCompile Include="MetricsManager.cpp" />
     <ClCompile Include="metricsFetcher.cpp" />
-    <ClCompile Include="MyScript.cpp" />
+    <ClCompile Include="Script.cpp" />
     <ClCompile Include="NetworkMetricProvider.cpp" />
     <ClCompile Include="ProcessMetricProvider.cpp" />
     <ClCompile Include="RAMMetricProvider.cpp" />
@@ -165,7 +165,7 @@
     <ClInclude Include="LogManager.h" />
     <ClInclude Include="MetricProviderBase.h" />
     <ClInclude Include="MetricsManager.h" />
-    <ClInclude Include="MyScript.h" />
+    <ClInclude Include="Script.h" />
     <ClInclude Include="NetworkMetricProvider.h" />
     <ClInclude Include="ProcessMetricProvider.h" />
     <ClInclude Include="RAMMetricProvider.h" />
@@ -206,6 +206,7 @@
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
       <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
     </CopyFileToFolders>
+    <None Include="README.md" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

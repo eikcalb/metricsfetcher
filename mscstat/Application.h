@@ -72,6 +72,7 @@ public:
 private:
     static volatile std::sig_atomic_t g_signal_flag;
 public:
+    std::string version = "1.0";
     std::string name = "Metrics Fetcher";
     std::string tableName = "Metrics_Fetcher";
 

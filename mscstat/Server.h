@@ -28,10 +28,15 @@ private:
     
     void getConfigHandler(const std::shared_ptr< Session >& session);
     void putConfigHandler(const std::shared_ptr< Session >& session);
+    void getCounterHandler(const std::shared_ptr< Session >& session);
 
     void getScriptsHandler(const std::shared_ptr< Session >& session);
     void postScriptHandler(const std::shared_ptr< Session >& session);
+    void patchScriptHandler(const std::shared_ptr< Session >& session);
     void deleteScriptHandler(const std::shared_ptr< Session >& session);
+
+    void GetProvidersData(const std::shared_ptr< Session >& session);
+    void GetProviderAggregateData(const std::shared_ptr< Session >& session);
 
     void getHealthHandler(const std::shared_ptr< Session >& session);
 
@@ -81,10 +86,15 @@ public:
         // API routes
         service->publish(createRouteResource("/api/config", "GET", [&](const std::shared_ptr< Session >& session) { getConfigHandler(session); }));
         service->publish(createRouteResource("/api/config/save", "PUT", [&](const std::shared_ptr< Session >& session) { putConfigHandler(session); }));
-       
+        service->publish(createRouteResource("/api/counters", "GET", [&](const std::shared_ptr< Session >& session) { getCounterHandler(session); }));
+
         service->publish(createRouteResource("/api/script", "GET", [&](const std::shared_ptr< Session >& session) { getScriptsHandler(session); }));
         service->publish(createRouteResource("/api/script/save", "POST", [&](const std::shared_ptr< Session >& session) { postScriptHandler(session); }));
+        service->publish(createRouteResource("/api/script/patch", "PATCH", [&](const std::shared_ptr< Session >& session) { patchScriptHandler(session); }));
         service->publish(createRouteResource("/api/script/delete/{name: .*}", "DELETE", [&](const std::shared_ptr< Session >& session) { deleteScriptHandler(session); }));
+
+        service->publish(createRouteResource("/api/providers/{limit: \\d*}", "GET", [&](const std::shared_ptr< Session >& session) { GetProvidersData(session); }));
+        service->publish(createRouteResource("/api/provider/aggregate", "GET", [&](const std::shared_ptr< Session >& session) { GetProviderAggregateData(session); }));
 
         service->publish(createRouteResource("/api/health", "GET", [&](const std::shared_ptr< Session >& session) { getHealthHandler(session); }));
 
@@ -101,11 +111,10 @@ public:
 private:
     static void errorHandler(const int, const std::exception& ex, const std::shared_ptr< Session > session)
     {
-
         LogManager::GetInstance().LogError("Server Error: {0}", ex.what());
         if (session && session->is_open()) {
             session->close(500, "Server Error", {
-                { "Content-Type", "application/json"},
+                { "Content-Type", "text/plain"},
                 { "Content-Length", "36" } });
         }
     }

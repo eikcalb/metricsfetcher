@@ -7,10 +7,16 @@ using namespace rapidjson;
 
 int main()
 {
-    auto &app = Application::CreateInstance();
-    app.Initialize();
+    try {
+        auto& app = Application::CreateInstance();
+        app.Initialize();
 
-    app.Run();
+        app.Run();
+    }
+    catch (std::exception ex) {
+        std::cout << ex.what() << std::endl;
+        return EXIT_FAILURE;
+    }
 
-    return 0;
+    return EXIT_SUCCESS;
 }

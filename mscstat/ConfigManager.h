@@ -6,10 +6,18 @@
 #include <rapidjson/prettywriter.h>
 #include <rapidjson/stringbuffer.h>
 
+#ifndef METRICS_FETCHER_PORT
+#define METRICS_FETCHER_PORT "METRICS_FETCHER_PORT"
+#endif // !METRICS_FETCHER_PORT
+
+
 struct MyConfig {
     // Default pool size is 4.
     short poolSize = 4;
-    short port = 8080;
+    // Environmental variable overrides whatever is set for this value,
+    // allowing the operating system to manage the port allocation and provide
+    // an available port to the application.
+    short port = (std::getenv(METRICS_FETCHER_PORT) != nullptr) ? std::atoi(std::getenv(METRICS_FETCHER_PORT)) : 8080;
     // Default interval for fetching each metric on a computer is 10 seconds
     short metricFetchInterval = 10 * 1000;
 };
