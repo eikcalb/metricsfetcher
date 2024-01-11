@@ -64,9 +64,6 @@ public:
 
 class DataManager {
 public:
-
-
-public:
     static DataManager& GetInstance() {
         static DataManager instance(Utils::GetAppDataPath() + "\\storage.db");
         return instance;

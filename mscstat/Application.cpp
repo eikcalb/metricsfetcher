@@ -35,15 +35,16 @@ void Application::Initialize() {
     scriptManager = &ScriptManager::GetInstance(configManager->GetConfig().metricFetchInterval);
     scriptManager->Initialize();
 
-    server = new Server(configManager->GetConfig().port);
-}
+    aiManager = &IntelligenceManager::GetInstance();
 
+    server = new Server(configManager->GetConfig().port);
+    server->SetupWebPaths(Utils::GetAllFilePaths(aiManager->GetWebRoot()));
+}
 
 void Application::Run() {
     // Implementation of the application logic
     std::signal(SIGINT, SignalHandler); // Handle Ctrl+C (SIGINT)
     std::signal(SIGTERM, SignalHandler); // Handle termination request (SIGTERM)
-
     logManager->LogInfo("========================");
     logManager->LogInfo("= Application Started! =");
     logManager->LogInfo("========================");

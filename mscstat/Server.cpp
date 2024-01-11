@@ -4,76 +4,36 @@
 void Server::getIndexHandler(const std::shared_ptr< Session >& session)
 {
     const auto request = session->get_request();
+    const std::string requestPath = request->get_path();
+    std::string file_path = Utils::GetAppDataPath() + "\\www" + requestPath;
+    std::string file_content = read_file(file_path);
 
-    std::ifstream stream("./index.html", std::ifstream::in);
-
-    if (stream.is_open())
-    {
-        const std::string body = std::string(std::istreambuf_iterator< char >(stream), std::istreambuf_iterator< char >());
-
-        const std::multimap< std::string, std::string > headers
-        {
-            { "Content-Type", "text/html" },
-            { "Content-Length", std::to_string(body.length()) }
-        };
-
-        session->close(OK, body, headers);
+    // Check if the file exists
+    if (!file_content.empty()) {
+        std::string content_type = get_content_type(file_path);
+        session->close(OK, file_content, { {"Content-Type", content_type}, {"Content-Length", std::to_string(file_content.length())} });
+        return;
     }
-    else
-    {
-        session->close(NOT_FOUND);
+
+    std::string fallback;
+    const std::string suffix = "/";
+    const auto endsWithSlash = file_path.size() >= suffix.size() && file_path.compare(file_path.size() - suffix.size(), suffix.size(), suffix) == 0;
+
+    if (endsWithSlash && Utils::FileExists(file_path + "index.html")) {
+        fallback = read_file(file_path + "index.html");
     }
-}
-
-void Server::getGraphHandler(const std::shared_ptr< Session >& session)
-{
-    const auto request = session->get_request();
-    const std::string filename = request->get_path_parameter("metricName");
-
-    std::ifstream stream("./graph." + filename + ".html", std::ifstream::in);
-
-    if (stream.is_open())
-    {
-        const std::string body = std::string(std::istreambuf_iterator< char >(stream), std::istreambuf_iterator< char >());
-
-        const std::multimap< std::string, std::string > headers
-        {
-            { "Content-Type", "text/html" },
-            { "Content-Length", std::to_string(body.length()) }
-        };
-
-        session->close(OK, body, headers);
+    else if (Utils::FolderExists(file_path) && Utils::FileExists(file_path + "/index.html")) {
+        fallback = read_file(file_path + "\\index.html");
     }
-    else
-    {
-        session->close(NOT_FOUND);
+    else if (Utils::FileExists(file_path + ".html")) {
+        // If file was empty, try suffixing with `.html`.
+        fallback = read_file(file_path + ".html");
     }
-}
-
-
-void Server::getMetricHandler(const std::shared_ptr< Session >& session)
-{
-    const auto request = session->get_request();
-    const std::string filename = request->get_path_parameter("metricName");
-
-    std::ifstream stream("./graph." + filename + ".html", std::ifstream::in);
-
-    if (stream.is_open())
-    {
-        const std::string body = std::string(std::istreambuf_iterator< char >(stream), std::istreambuf_iterator< char >());
-
-        const std::multimap< std::string, std::string > headers
-        {
-            { "Content-Type", "text/html" },
-            { "Content-Length", std::to_string(body.length()) }
-        };
-
-        session->close(OK, body, headers);
+    else {
+        fallback = read_file(Utils::GetAppDataPath() + "\\www\\404.html");
     }
-    else
-    {
-        session->close(NOT_FOUND);
-    }
+
+    session->close(OK, fallback, { {"Content-Type", "text/html"}, {"Content-Length", std::to_string(fallback.length())} });
 }
 
 void Server::getConfigHandler(const std::shared_ptr< Session >& session)
@@ -247,7 +207,8 @@ void Server::GetProvidersData(const std::shared_ptr< Session >& session)
             { "Content-Type", "application/json"},
             { "Content-Length", std::to_string(scripts.length()) }
             });
-    } catch (std::runtime_error e) {
+    }
+    catch (std::runtime_error e) {
         session->close(BAD_REQUEST, e.what(), {
             { "Content-Type", "text/plain"},
             { "Content-Length", std::to_string(strlen(e.what())) }
@@ -260,7 +221,7 @@ void Server::GetProviderAggregateData(const std::shared_ptr< Session >& session)
 {
     try {
         const auto& req = session->get_request();
-        const auto & column = req->get_query_parameter("column");
+        const auto& column = req->get_query_parameter("column");
         if (column.empty()) {
             throw std::runtime_error("Provide column in order to fetch aggregate.");
         }
@@ -291,7 +252,8 @@ void Server::getHealthHandler(const std::shared_ptr< Session >& session)
             { "Content-Type", "application/json"},
             { "Content-Length", std::to_string(info.length()) }
             });
-    } catch (std::runtime_error e) {
+    }
+    catch (std::runtime_error e) {
         session->close(BAD_REQUEST, e.what(), {
             { "Content-Type", "text/plain"},
             { "Content-Length", std::to_string(strlen(e.what())) }

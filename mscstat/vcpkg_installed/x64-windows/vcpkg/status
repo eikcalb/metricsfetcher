@@ -1,0 +1,156 @@
+Package: vcpkg-cmake-config
+Version: 2022-02-06
+Port-Version: 1
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 5dd9120a712389088dfb2730f567ca0420b93560c548d6c3def899f0a1d040c3
+Status: install ok installed
+
+Package: vcpkg-cmake
+Version: 2023-05-04
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 991ff18ad000487a58b6a0f3090156cc2fab3a7cc5c1df4387e12d4a3a544829
+Status: install ok installed
+
+Package: duktape
+Version: 2.7.0
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 2a461e6b0b81900b740dea930e8af0abd8982d0a74cda9eba505fce3b4dc3726
+Description: Embeddable Javascript engine with a focus on portability and compact footprint.
+Status: install ok installed
+
+Package: zlib
+Version: 1.3
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 52587ef1fe1edf3097f2ea8869eeb38bf2c524be01f80494f9d8ca4d9a0ae89f
+Description: A compression library
+Status: install ok installed
+
+Package: bzip2
+Version: 1.0.8
+Port-Version: 5
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 14b2953b4f078f7685906d31ae5f055f1dd537e03d1654360bb0ff9987c3eeb4
+Description: bzip2 is a freely available, patent free, high-quality data compressor. It typically compresses files to within 10% to 15% of the best available techniques (the PPM family of statistical compressors), whilst being around twice as fast at compression and six times faster at decompression.
+Default-Features: tool
+Status: install ok installed
+
+Package: bzip2
+Feature: tool
+Architecture: x64-windows
+Multi-Arch: same
+Description: Builds bzip2 executable
+Status: install ok installed
+
+Package: libzip
+Version: 1.10.1
+Depends: vcpkg-cmake, vcpkg-cmake-config, zlib
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3b7c7cb936de1e47ac559f52d2629f884583e28f9aa9e20c9663770c2118bc2f
+Description: A library for reading, creating, and modifying zip archives.
+Default-Features: bzip2, default-aes
+Status: install ok installed
+
+Package: libzip
+Feature: bzip2
+Depends: bzip2
+Architecture: x64-windows
+Multi-Arch: same
+Description: Support bzip2-compressed zip archives
+Status: install ok installed
+
+Package: libzip
+Feature: default-aes
+Architecture: x64-windows
+Multi-Arch: same
+Description: Use default AES
+Status: install ok installed
+
+Package: libzip
+Feature: wincrypto
+Architecture: x64-windows
+Multi-Arch: same
+Description: AES (encryption) support using Windows Crypto API
+Status: install ok installed
+
+Package: asio
+Version: 1.28.2
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8e53f8462253926a48cf89515db25b951d59ed2c60cbe8200abd9ff99cbe57ea
+Description: Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
+Status: purge ok not-installed
+
+Package: restbed
+Version: 4.8
+Port-Version: 3
+Depends: asio, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 8238b576d3694ab19ca501258d804523476b2b29322a68d1d08787f6bb6b7d64
+Description: Corvusoft's Restbed framework brings asynchronous RESTful functionality to C++14 applications.
+Status: purge ok not-installed
+
+Package: fmt
+Version: 10.2.1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 349fe98977c929ea982296303b86796c0c764e6a45ff926623e71a8fb93d603f
+Description: Formatting library for C++. It can be used as a safe alternative to printf or as a fast alternative to IOStreams.
+Status: install ok installed
+
+Package: spdlog
+Version: 1.12.0
+Depends: fmt, vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 4ba510de91e87ebb855397daa9a02db225b982de239e48547935b986eb9d589c
+Description: Very fast, header only, C++ logging library
+Status: install ok installed
+
+Package: sqlite3
+Version: 3.43.2
+Port-Version: 1
+Depends: vcpkg-cmake, vcpkg-cmake-config
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 93f6760235b48baa27d4acc752917946eb17b8494f5b161ecc1b2ae1416a8211
+Description: SQLite is a software library that implements a self-contained, serverless, zero-configuration, transactional SQL database engine.
+Default-Features: json1
+Status: install ok installed
+
+Package: sqlite3
+Feature: json1
+Architecture: x64-windows
+Multi-Arch: same
+Description: Enable JSON functionality for sqlite3
+Status: install ok installed
+
+Package: vcpkg-cmake-get-vars
+Version: 2023-03-02
+Depends: vcpkg-cmake
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 3fd6b5d09076fbad97089a03b30d1d129ba8dc002f2b2e44edfd1b523fb3c227
+Status: install ok installed
+
+Package: openssl
+Version: 3.2.0
+Port-Version: 2
+Depends: vcpkg-cmake, vcpkg-cmake-config, vcpkg-cmake-get-vars
+Architecture: x64-windows
+Multi-Arch: same
+Abi: 558a662724b7381b4e45ebb3f5c9108015a033c923cfbd0251f7c7995f48a51f
+Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
+Status: install ok installed
+

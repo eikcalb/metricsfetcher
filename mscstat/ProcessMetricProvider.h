@@ -18,7 +18,7 @@ class ProcessMetricProvider: public MetricProviderBase {
             DataManager::GetInstance().CreateTable("ProcessMetricProvider", " \
             id INTEGER PRIMARY KEY, \
             name TEXT DEFAULT \"Process\", \
-            counter REAL NOT NULL, \
+            counter INTEGER NOT NULL, \
             processCount REAL DEFAULT 0, \
             activeProcess TEXT DEFAULT \"\", \
             activeWindow TEXT DEFAULT \"\", \
@@ -43,7 +43,7 @@ class ProcessMetricProvider: public MetricProviderBase {
             // Fetch the most recent data, up to `count`
             rapidjson::Value response(rapidjson::kArrayType);
 
-            const auto rows = DataManager::GetInstance().Select("ProcessMetricProvider", "1=1 ORDER BY id DESC LIMIT " + count);
+            const auto rows = DataManager::GetInstance().Select("ProcessMetricProvider", "1=1 ORDER BY id DESC LIMIT " + std::to_string(count));
             for (auto& row : rows) {
                 rapidjson::Value obj(rapidjson::kObjectType);
 
@@ -51,7 +51,7 @@ class ProcessMetricProvider: public MetricProviderBase {
                 auto counter = row.GetInt("counter");
                 auto timestamp = row.GetInt("timestamp");
 
-                auto processCount = row.GetInt("processCount");
+                auto processCount = row.GetDouble("processCount");
                 auto activeProcess = row.GetString("activeProcess");
                 auto activeWindow = row.GetString("activeWindow");
                 auto bytesReadPerSecond = row.GetDouble("bytesReadPerSecond");

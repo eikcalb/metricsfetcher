@@ -1,4 +1,6 @@
 #pragma once
+#include <algorithm>
+#include <zip.h>
 #include <iostream>
 #include <string>
 #include <Windows.h>
@@ -9,12 +11,90 @@
 #include <functional>
 #include <codecvt>
 #include <rapidjson/document.h>
+#include <filesystem>
+#include <set>
 
 #include "LogManager.h"
 
 class Utils
 {
 public:
+    static bool ExtractZip(std::string source, std::string destination);
+    
+    static std::string GetAppDataPath();
+
+    static bool FileExists(const std::string& filePath) {
+        return std::filesystem::exists(filePath) && std::filesystem::is_regular_file(filePath);
+    }
+
+    static bool FolderExists(const std::string& folderPath) {
+        return std::filesystem::exists(folderPath) && std::filesystem::is_directory(folderPath);
+    }
+
+    static std::set<std::string> GetAllFilePaths(const std::string& folderPath) {
+        std::set<std::string> filePaths;
+
+        try {
+            // Iterate over all files and directories in the given path
+            for (const auto& entry : std::filesystem::recursive_directory_iterator(folderPath)) {
+                // Check if the entry is a regular file (not a directory)
+                if (entry.is_regular_file()) {
+                    // Get the path as a string and add it to the set
+                    std::filesystem::path fullFilePath(entry.path().string());
+
+                    // Extract the relative path
+                    std::filesystem::path relativePath = fullFilePath.lexically_relative(folderPath);
+                    auto pathString = relativePath.string();
+                    std::replace(pathString.begin(), pathString.end(), '\\', '/');
+
+                    filePaths.insert(pathString);
+
+                    // Check if the file is html and add the path without it's extension
+                    // This is because Restbed server will not match without explicitly
+                    // configuring this.
+                    if (relativePath.extension() == ".html") {
+                        relativePath.replace_extension();
+                        pathString = relativePath.string();
+                        std::replace(pathString.begin(), pathString.end(), '\\', '/');
+
+                        filePaths.insert(pathString);
+                    }
+                }
+            }
+        }
+        catch (const std::exception& e) {
+            LogManager::GetInstance().LogError("Error reading directories at path \"{0}\". Error: {1}", folderPath, e.what());
+        }
+
+        return filePaths;
+    }
+
+    static std::string GetExecutableDir() {
+        char buffer[MAX_PATH];
+        GetModuleFileNameA(nullptr, buffer, MAX_PATH);
+        return std::filesystem::path(buffer).parent_path().string();
+    }
+
+    static void NotifyUser(const std::string title, const std::string& message, const UINT type = MB_ICONINFORMATION) {
+        UINT mask;
+
+        if (MB_ICONINFORMATION == (type & MB_ICONINFORMATION)) {
+            mask = MB_ICONINFORMATION;
+        }
+        else if (MB_ICONERROR == (type & MB_ICONERROR)) {
+            mask = MB_ICONERROR;
+        }
+        else if (MB_ICONQUESTION == (type & MB_ICONQUESTION)) {
+            mask = MB_ICONQUESTION;
+        }
+        else {
+            mask = MB_ICONWARNING;
+        }
+
+        MessageBeep(mask);
+        MessageBoxA(NULL, message.c_str(), title.c_str(), type | MB_OK | MB_TASKMODAL | MB_SERVICE_NOTIFICATION);
+    }
+
     static rapidjson::Value ConvertDoubleToJSONValue(const double& value, rapidjson::Document::AllocatorType& allocator) {
         rapidjson::Value rapidValue;
         rapidValue.SetDouble(value);
@@ -57,7 +137,7 @@ public:
         _pclose(pipe);
 
         // Remove shell comment
-        if (!output.empty()) {
+        if (!output.empty() && output.size() > 3) {
             output.pop_back();
             output.pop_back();
             output.pop_back();
@@ -65,8 +145,6 @@ public:
 
         return output;
     }
-
-    static std::string GetAppDataPath();
 
     static std::string GetActiveProcessTitle() {
         HWND hwnd = GetForegroundWindow(); // Get the handle of the focused window

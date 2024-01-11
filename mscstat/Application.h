@@ -10,6 +10,7 @@
 #include "MetricsManager.h"
 #include "ScriptManager.h"
 #include "Server.h"
+#include "IntelligenceManager.h"
 
 class Application
 {
@@ -82,6 +83,7 @@ public:
     MetricsManager* metricsManager;
     ThreadManager* threadManager;
     ScriptManager* scriptManager;
+    IntelligenceManager* aiManager;
 
     Server* server;
 
