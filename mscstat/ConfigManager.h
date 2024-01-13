@@ -20,6 +20,8 @@ struct MyConfig {
     short port = (std::getenv(METRICS_FETCHER_PORT) != nullptr) ? std::atoi(std::getenv(METRICS_FETCHER_PORT)) : 8080;
     // Default interval for fetching each metric on a computer is 10 seconds
     short metricFetchInterval = 10 * 1000;
+    // Default prediction interval is set to 5 minutes
+    short predictionInterval = 5 * 60 * 1000;
 };
 
 class ConfigManager {
@@ -53,6 +55,7 @@ public:
         doc.AddMember("poolSize", config.poolSize, doc.GetAllocator());
         doc.AddMember("port", config.port, doc.GetAllocator());
         doc.AddMember("metricFetchInterval", config.metricFetchInterval, doc.GetAllocator());
+        doc.AddMember("predictionInterval", config.predictionInterval, doc.GetAllocator());
 
         // Serialize the Document to a JSON string
         rapidjson::StringBuffer buffer;
@@ -86,6 +89,9 @@ public:
         }
         if (document.HasMember("metricFetchInterval") && document["metricFetchInterval"].IsUint()) {
             config.metricFetchInterval = document["metricFetchInterval"].GetUint();
+        }
+        if (document.HasMember("predictionInterval") && document["predictionInterval"].IsUint()) {
+            config.predictionInterval = document["predictionInterval"].GetUint();
         }
 
         return config;

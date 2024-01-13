@@ -11,6 +11,7 @@
 enum ThreadType {
     RANDOM_THREAD = -1,
     METRICS_MANAGER_THREAD = 0,
+    INTELLIGENCE_MANAGER_THREAD = 1,
 };
 
 class ThreadManager {

@@ -1,8 +1,8 @@
-Package: asio
-Version: 1.28.2
-Depends: vcpkg-cmake, vcpkg-cmake-config
+Package: tensorflow-common
+Version: 2.10.0
+Port-Version: 2
 Architecture: x64-windows
 Multi-Arch: same
-Abi: 8e53f8462253926a48cf89515db25b951d59ed2c60cbe8200abd9ff99cbe57ea
-Description: Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
-Status: install ok half-installed
+Abi: a6e34ca384c2943e0f0b0fb34f7fd5a293869f4a5fb6be6a65b6cefc71f58406
+Description: This meta package holds common files for the C [tensorflow] and the C++ [tensorflow-cc] API version of TensorFlow but is not installable on its own.
+Status: purge ok half-installed

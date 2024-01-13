@@ -1,1 +1,1144 @@
-﻿  mscstat.vcxproj -> C:\Users\Onome Israel Agwa\source\repos\mscstat\x64\Release\mscstat.exe
+﻿  Application.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ProcessMetricProvider.h(63,76): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+  CPUMetricProvider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetActiveProcessTitle'
+  ConfigManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+  DataManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+  IntelligenceManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+  LogManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+  MetricProviderBase.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetActiveProcessTitle'
+  MetricsManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\MetricsManager.cpp(17,59): warning C4244: 'argument': conversion from 'unsigned __int64' to 'UINT16', possible loss of data
+  NetworkMetricProvider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetActiveProcessTitle'
+  ProcessMetricProvider.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ProcessMetricProvider.h(63,76): warning C4244: 'argument': conversion from 'double' to 'const int', possible loss of data
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetActiveProcessTitle'
+  RAMMetricProvider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetActiveProcessTitle'
+  Script.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetActiveProcessTitle'
+  ScriptManager.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ScriptManager.cpp(16,45): warning C4244: '=': conversion from '_Ty' to 'UINT', possible loss of data
+          with
+          [
+              _Ty=unsigned __int64
+          ]
+  Server.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+  StorageMetricProvider.cpp
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2765,53): warning C4244: 'argument': conversion from 'wchar_t' to 'const _Elem', possible loss of data
+          with
+          [
+              _Elem=char
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(2621,17): message : see reference to function template instantiation 'void std::basic_string<char,std::char_traits<char>,std::allocator<char>>::_Construct_from_iter<wchar_t*,wchar_t*,_Size_type>(_Iter,const _Sent,_Size)' being compiled
+          with
+          [
+              _Size_type=unsigned __int64,
+              _Iter=wchar_t *,
+              _Sent=wchar_t *,
+              _Size=unsigned __int64
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see reference to function template instantiation 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string<std::_String_iterator<std::_String_val<std::_Simple_types<_Elem>>>,0>(_Iter,_Iter,const _Alloc &)' being compiled
+          with
+          [
+              _Elem=wchar_t,
+              _Iter=std::_String_iterator<std::_String_val<std::_Simple_types<wchar_t>>>,
+              _Alloc=std::allocator<char>
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\Utils.h(205,47): message : see the first reference to 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>::basic_string' in 'Utils::GetActiveProcessTitle'
+  ThreadManager.cpp
+  Utils.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found
+  metricsFetcher.cpp
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4305: 'initializing': truncation from 'int' to 'short'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\ConfigManager.h(24,39): warning C4309: 'initializing': truncation of constant value
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,48): warning C4251: 'restbed::Uri::m_pimpl': class 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Uri'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\uri.hpp(150,18): message : see declaration of 'std::unique_ptr<restbed::detail::UriImpl,std::default_delete<restbed::detail::UriImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,49): warning C4251: 'restbed::Rule::m_pimpl': class 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Rule'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\rule.hpp(104,18): message : see declaration of 'std::unique_ptr<restbed::detail::RuleImpl,std::default_delete<restbed::detail::RuleImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\string.hpp(81,38): warning C4251: 'restbed::String::empty': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' needs to have dll-interface to be used by clients of class 'restbed::String'
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\xstring(5155,29): message : see declaration of 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,52): warning C4251: 'restbed::Request::m_pimpl': class 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Request'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\request.hpp(205,18): message : see declaration of 'std::unique_ptr<restbed::detail::RequestImpl,std::default_delete<restbed::detail::RequestImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,52): warning C4251: 'restbed::Service::m_pimpl': class 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Service'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\service.hpp(152,18): message : see declaration of 'std::unique_ptr<restbed::detail::ServiceImpl,std::default_delete<restbed::detail::ServiceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,61): warning C4251: 'restbed::ContextValue::m_placeholder': class 'std::shared_ptr<restbed::ContextPlaceholderBase>' needs to have dll-interface to be used by clients of class 'restbed::ContextValue'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\context_value.hpp(119,24): message : see declaration of 'std::shared_ptr<restbed::ContextPlaceholderBase>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(56,5): warning C4251: 'std::enable_shared_from_this<restbed::Session>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::Session>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::Session
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,52): warning C4251: 'restbed::Session::m_pimpl': class 'std::shared_ptr<restbed::detail::SessionImpl>' needs to have dll-interface to be used by clients of class 'restbed::Session'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\session.hpp(200,18): message : see declaration of 'std::shared_ptr<restbed::detail::SessionImpl>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,53): warning C4251: 'restbed::Response::m_pimpl': class 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Response'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\response.hpp(147,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResponseImpl,std::default_delete<restbed::detail::ResponseImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,53): warning C4251: 'restbed::Resource::m_pimpl': class 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Resource'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\resource.hpp(128,18): message : see declaration of 'std::unique_ptr<restbed::detail::ResourceImpl,std::default_delete<restbed::detail::ResourceImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,53): warning C4251: 'restbed::Settings::m_pimpl': class 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::Settings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\settings.hpp(176,18): message : see declaration of 'std::unique_ptr<restbed::detail::SettingsImpl,std::default_delete<restbed::detail::SettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,61): warning C4251: 'restbed::WebSocketMessage::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocketMessage'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket_message.hpp(153,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketMessageImpl,std::default_delete<restbed::detail::WebSocketMessageImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(49,5): warning C4251: 'std::enable_shared_from_this<restbed::WebSocket>::_Wptr': class 'std::weak_ptr<_Ty>' needs to have dll-interface to be used by clients of class 'std::enable_shared_from_this<restbed::WebSocket>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Program Files\Microsoft Visual Studio\2022\Professional\VC\Tools\MSVC\14.36.32532\include\memory(3129,16): message : see declaration of 'std::weak_ptr<_Ty>'
+          with
+          [
+              _Ty=restbed::WebSocket
+          ]
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,54): warning C4251: 'restbed::WebSocket::m_pimpl': class 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>' needs to have dll-interface to be used by clients of class 'restbed::WebSocket'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\web_socket.hpp(146,18): message : see declaration of 'std::unique_ptr<restbed::detail::WebSocketImpl,std::default_delete<restbed::detail::WebSocketImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,56): warning C4251: 'restbed::SSLSettings::m_pimpl': class 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>' needs to have dll-interface to be used by clients of class 'restbed::SSLSettings'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\vcpkg_installed\x64-windows\x64-windows\include\corvusoft\restbed\ssl_settings.hpp(169,18): message : see declaration of 'std::unique_ptr<restbed::detail::SSLSettingsImpl,std::default_delete<restbed::detail::SSLSettingsImpl>>'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,24): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(55,9): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,26): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,35): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(56,9): error C3861: 'TF_DeleteSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,33): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(57,9): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,25): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(58,9): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,20): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(106,13): error C2065: 'TF_FLOAT': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(105,35): error C3861: 'TF_AllocateTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,35): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(108,21): error C3861: 'TF_TensorData': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2146: syntax error: missing ';' before identifier 'input_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,25): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,62): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,38): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,34): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,20): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,34): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,40): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(111,53): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,1): error C4430: missing type specifier - int assumed. Note: C++ does not support default-int
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,15): error C2086: 'const int TF_Output': redefinition
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(110,15): message : see declaration of 'TF_Output'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2146: syntax error: missing ';' before identifier 'output_op'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,25): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,63): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,39): error C3861: 'TF_GraphOperationByName': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(113,35): error C3079: an initializer list cannot be used as the right operand of this assignment operator
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,9): error C2065: 'TF_Tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,20): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,35): error C2059: syntax error: ']'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,1): error C2143: syntax error: missing ';' before '{'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(114,49): error C2143: syntax error: missing ';' before '}'
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,13): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,32): error C2065: 'input_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,42): error C2065: 'input_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,61): error C2065: 'output_op': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(118,72): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(119,34): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(117,9): error C3861: 'TF_SessionRun': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,24): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,13): error C3861: 'TF_GetCode': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(122,35): error C2065: 'TF_OK': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,89): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(123,78): error C3861: 'TF_Message': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,29): error C2065: 'input_tensor': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(124,13): error C3861: 'TF_DeleteTensor': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,29): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(125,13): error C3861: 'TF_DeleteStatus': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,28): error C2065: 'graph': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(126,13): error C3861: 'TF_DeleteGraph': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,37): error C2065: 'session_options': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(127,13): error C3861: 'TF_DeleteSessionOptions': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,29): error C2065: 'session': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,38): error C2065: 'status': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(128,13): error C3861: 'TF_CloseSession': identifier not found
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,76): error C2065: 'output_tensors': undeclared identifier
+C:\Users\Onome Israel Agwa\source\repos\mscstat\mscstat\IntelligenceManager.h(133,62): error C3861: 'TF_TensorData': identifier not found

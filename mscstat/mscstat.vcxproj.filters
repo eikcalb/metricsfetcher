@@ -13,6 +13,9 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="python">
+      <UniqueIdentifier>{e0d282e8-f84c-4649-97bc-58ebffccbdc3}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="metricsFetcher.cpp">
@@ -125,6 +128,10 @@
   </ItemGroup>
   <ItemGroup>
     <CopyFileToFolders Include="www.zip" />
+    <CopyFileToFolders Include="model.zip" />
+    <CopyFileToFolders Include="python\requirements.txt">
+      <Filter>python</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

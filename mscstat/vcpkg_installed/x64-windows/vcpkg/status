@@ -88,7 +88,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 8e53f8462253926a48cf89515db25b951d59ed2c60cbe8200abd9ff99cbe57ea
 Description: Asio is a cross-platform C++ library for network and low-level I/O programming that provides developers with a consistent asynchronous model using a modern C++ approach.
-Status: purge ok not-installed
+Status: install ok installed
 
 Package: restbed
 Version: 4.8
@@ -98,7 +98,7 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 8238b576d3694ab19ca501258d804523476b2b29322a68d1d08787f6bb6b7d64
 Description: Corvusoft's Restbed framework brings asynchronous RESTful functionality to C++14 applications.
-Status: purge ok not-installed
+Status: install ok installed
 
 Package: fmt
 Version: 10.2.1
@@ -152,5 +152,22 @@ Architecture: x64-windows
 Multi-Arch: same
 Abi: 558a662724b7381b4e45ebb3f5c9108015a033c923cfbd0251f7c7995f48a51f
 Description: OpenSSL is an open source project that provides a robust, commercial-grade, and full-featured toolkit for the Transport Layer Security (TLS) and Secure Sockets Layer (SSL) protocols. It is also a general-purpose cryptography library.
+Status: install ok installed
+
+Package: vcpkg-tool-bazel
+Version: 5.2.0
+Architecture: x64-windows
+Multi-Arch: same
+Abi: d66e10d1483802da37f3a415a6adabd002b50671c1205a5ef3bf02c283e9fc5f
+Description: Bazel build system
+Status: install ok installed
+
+Package: tensorflow-common
+Version: 2.10.0
+Port-Version: 2
+Architecture: x64-windows
+Multi-Arch: same
+Abi: a6e34ca384c2943e0f0b0fb34f7fd5a293869f4a5fb6be6a65b6cefc71f58406
+Description: This meta package holds common files for the C [tensorflow] and the C++ [tensorflow-cc] API version of TensorFlow but is not installable on its own.
 Status: install ok installed
 

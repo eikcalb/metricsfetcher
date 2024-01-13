@@ -17,3 +17,7 @@
 	- https://www.memtest.org/
 - CrystalDiskMark is a simple disk benchmark software.
 	- https://crystalmark.info/en/software/crystaldiskmark/
+- Deep learning how to
+	- https://machinelearningmastery.com/tensorflow-tutorial-deep-learning-with-tf-keras/
+- Fix Tensorflow for Windows
+	- https://github.com/tensorflow/tensorflow/issues/59762
