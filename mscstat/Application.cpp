@@ -71,6 +71,11 @@ void Application::Run() {
                 },
                 ThreadType::METRICS_MANAGER_THREAD
             );
+            threadManager->AddTaskToThread([this] {
+                aiManager->Start();
+                },
+                ThreadType::METRICS_MANAGER_THREAD
+            );
 
             logManager->LogInfo("Starting HTTP server.");
             // This is a blocking call that keeps the application server running

@@ -20,13 +20,16 @@ public:
     // This will start the prediction service and will run in at intervals to
     // compute and predict the device health using the module loaded.
     // This is a blocking call and should be done in a different thread.
-    void Start(UINT interval) {
-        
+    void Start();
+
+    void Stop() {
+        active = false;
     }
 
 private:
     std::string webRoot;
     std::string modelFullPath;
+    std::atomic<bool> active = false;
 
 private:
     IntelligenceManager(const std::string webPath, const std::string modelPath) {
@@ -96,9 +99,14 @@ private:
     }
 
     void Predict() {
+        const std::string params = "{\"modelPath\":\"" + this->modelFullPath
+            + "\",\"databasePath\":\"" + Utils::GetAppDataPath() + "\\storage.db" + "\"}";
         // Code to run prediction is saved in python.
         // Here, we run the file.
-        const auto reaponse = Utils::ExecutePythonFile(Utils::GetExecutableDir() + "\\predict.py");
+        const auto reaponse = Utils::ExecutePythonFile(
+            Utils::GetExecutableDir() + "\\predict.py",
+            params
+        );
 
         // Parse the prediction received from python.
 

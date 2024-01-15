@@ -132,6 +132,9 @@
     <CopyFileToFolders Include="python\requirements.txt">
       <Filter>python</Filter>
     </CopyFileToFolders>
+    <CopyFileToFolders Include="python\predict.py">
+      <Filter>python</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />

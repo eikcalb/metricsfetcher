@@ -24,7 +24,7 @@ public:
     static std::string GetAppDataPath();
 
     static bool IsPythonInstalled() {
-        int pythonInstalled = system("python --version > /dev/null 2>&1");
+        int pythonInstalled = system("python --version");
         return pythonInstalled == 0;
     }
 
@@ -41,8 +41,9 @@ public:
         // Install dependencies using pip if not installed
         if (dependenciesInstalled != 0) {
             LogManager::GetInstance().LogInfo("Installing dependencies Python...");
-            std::string installDependenciesCommand = "python -m pip install -r ";
+            std::string installDependenciesCommand = "python -m pip install -r \"";
             installDependenciesCommand += requirementsFile;
+            installDependenciesCommand += "\"";
 
             int installResult = system(installDependenciesCommand.c_str());
 
@@ -174,6 +175,39 @@ public:
             output.pop_back();
             output.pop_back();
         }
+
+        return output;
+    }
+
+    static std::string ExecutePythonFile(const std::string& filePath, const std::string& arguments = "") {
+        std::string output;
+        std::string command = "python ";
+        command += filePath;
+        command += " ";
+        command += arguments;
+
+        LogManager::GetInstance().LogInfo("Executing Python file: {0}", command);
+
+        FILE* pipe = _popen(command.c_str(), "r");
+
+        if (!pipe) {
+            throw std::runtime_error("Failed to open shell pipe.");
+        }
+
+        try {
+            char buffer[1024];
+            while (!feof(pipe)) {
+                if (fgets(buffer, sizeof(buffer), pipe) != nullptr)
+                    output += buffer;
+            }
+        } catch (std::exception e) {
+            _pclose(pipe);
+            LogManager::GetInstance().LogError("Failed to execute python file: {0}", filePath);
+            throw e;
+        }
+
+        // Close the pipe
+        _pclose(pipe);
 
         return output;
     }
