@@ -4,7 +4,7 @@
 // Start collecting metrics at a specified interval
 void MetricsManager::StartMetricsCollection() {
     // Set the flag to indicate that metrics collection is active
-    isCollectingMetrics_ = true;
+    isCollectingMetrics_ = false;
     counter = 0;
 
     // Start a loop to collect metrics at the specified interval.

@@ -3,10 +3,21 @@
 
 #include "Utils.h"
 
+struct Prediction {
+    int CPU;
+    int PROCESS;
+    int MEMORY;
+    int STORAGE;
+    int SCRIPT;
+};
+
 class IntelligenceManager {
 public:
     static IntelligenceManager& GetInstance() {
-        static IntelligenceManager instance(Utils::GetAppDataPath() + "\\www", Utils::GetAppDataPath() + "\\model");
+        static IntelligenceManager instance(
+            Utils::GetAppDataPath() + "\\www",
+            Utils::GetAppDataPath() + "\\model",
+            Utils::GetAppDataPath() + "\\prediction.txt");
         return instance;
     }
 
@@ -29,12 +40,14 @@ public:
 private:
     std::string webRoot;
     std::string modelFullPath;
+    std::string predictionFullPath;
     std::atomic<bool> active = false;
 
 private:
-    IntelligenceManager(const std::string webPath, const std::string modelPath) {
+    IntelligenceManager(const std::string webPath, const std::string modelPath, const std::string output) {
         webRoot = webPath;
         modelFullPath = modelPath;
+        predictionFullPath = output;
 
         // Check if web root has been created, creat otherwise
         if (!Utils::FolderExists(webRoot)) {
@@ -99,17 +112,35 @@ private:
     }
 
     void Predict() {
-        const std::string params = "{\"modelPath\":\"" + this->modelFullPath
-            + "\",\"databasePath\":\"" + Utils::GetAppDataPath() + "\\storage.db" + "\"}";
+        const std::string params = "\"" + this->modelFullPath + "\" \""
+            + Utils::GetAppDataPath() + "\\storage.db" + "\""
+            + " \"" + this->predictionFullPath + "\"";
         // Code to run prediction is saved in python.
         // Here, we run the file.
-        const auto reaponse = Utils::ExecutePythonFile(
+        const auto response = Utils::ExecutePythonFile(
             Utils::GetExecutableDir() + "\\predict.py",
             params
         );
 
         // Parse the prediction received from python.
+        const auto preds = Utils::ReadIntegersFromFile(predictionFullPath);
+        auto predictions = Prediction{ preds[0] , preds[1] , preds[2] , preds[3] , preds[4] };
 
+        if (predictions.CPU == 1) {
+            Utils::NotifyUser("CPU monitor", "Your CPU seems to be under high usage.");
+        }
+        else if (predictions.MEMORY == 1) {
+            Utils::NotifyUser("RAM monitor", "Your RAM seems to be under high usage.");
+        }
+        else if (predictions.PROCESS == 1) {
+            Utils::NotifyUser("Process monitor", "Your processes seem to be affecting your computer.");
+        }
+        else if (predictions.SCRIPT == 1) {
+            Utils::NotifyUser("Performance monitor", "Your computer performance is not optimal.");
+        }
+        else if (predictions.STORAGE == 1) {
+            Utils::NotifyUser("Storage monitor", "Your Storage seems to be under high usage.");
+        }
     }
 };
 

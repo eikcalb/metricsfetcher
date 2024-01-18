@@ -13,6 +13,9 @@
 #include <rapidjson/document.h>
 #include <filesystem>
 #include <set>
+#include <fstream>
+#include <sstream>
+
 
 #include "LogManager.h"
 
@@ -181,9 +184,9 @@ public:
 
     static std::string ExecutePythonFile(const std::string& filePath, const std::string& arguments = "") {
         std::string output;
-        std::string command = "python ";
+        std::string command = "python \"";
         command += filePath;
-        command += " ";
+        command += "\" ";
         command += arguments;
 
         LogManager::GetInstance().LogInfo("Executing Python file: {0}", command);
@@ -207,7 +210,11 @@ public:
         }
 
         // Close the pipe
-        _pclose(pipe);
+        const auto exitCode = _pclose(pipe);
+        if (exitCode != 0) {
+            LogManager::GetInstance().LogError("Failed to execute python file: {0}", filePath);
+            throw std::runtime_error("Failed to execute process for python file: " + output);
+        }
 
         return output;
     }
@@ -329,6 +336,41 @@ public:
         std::wstring wstr(wstrLen, 0);
         MultiByteToWideChar(CP_ACP, 0, str.c_str(), -1, &wstr[0], wstrLen);
         return wstr;
+    }
+
+    static int* ReadIntegersFromFile(const std::string& filename) {
+        int integers[] = {0,0,0,0,0};
+
+        // Open the file
+        std::ifstream file(filename);
+        if (!file.is_open()) {
+            LogManager::GetInstance().LogError("Error opening file: {0}", filename);
+            return integers;
+        }
+
+        std::string file_content;
+        std::getline(file, file_content);
+
+        // Close the file
+        file.close();
+
+        // Use a stringstream to parse the comma-separated integers
+        std::stringstream ss(file_content);
+
+        for (int i = 0; i < 5; ++i) {
+            if (!(ss >> integers[i])) {
+                LogManager::GetInstance().LogWarning("Incorrect format found");
+                return integers;
+            }
+
+            char comma;
+            if (i < 5 - 1 && !(ss >> comma && comma == ',')) {
+                LogManager::GetInstance().LogWarning("Incorrect format found");
+                return integers;
+            }
+        }
+
+        return integers;
     }
 };
 

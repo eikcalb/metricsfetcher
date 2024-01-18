@@ -74,7 +74,7 @@ void Application::Run() {
             threadManager->AddTaskToThread([this] {
                 aiManager->Start();
                 },
-                ThreadType::METRICS_MANAGER_THREAD
+                ThreadType::INTELLIGENCE_MANAGER_THREAD
             );
 
             logManager->LogInfo("Starting HTTP server.");
