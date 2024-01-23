@@ -21,7 +21,7 @@ struct MyConfig {
     // Default interval for fetching each metric on a computer is 10 seconds
     short metricFetchInterval = 10 * 1000;
     // Default prediction interval is set to 5 minutes
-    short predictionInterval = 5 * 60 * 1000;
+    int predictionInterval = 5 * 60 * 100;
 };
 
 class ConfigManager {

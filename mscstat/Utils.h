@@ -27,12 +27,12 @@ public:
     static std::string GetAppDataPath();
 
     static bool IsPythonInstalled() {
-        int pythonInstalled = system("python --version");
+        int pythonInstalled = system("py --version");
         return pythonInstalled == 0;
     }
 
     static void CheckAndInstallPythonDependencies(const std::string& requirementsFile) {
-        std::string checkDependenciesCommand = "python -c \"import sys, pkgutil; exit_code = all(pkgutil.find_loader(package) is not None for package in sys.argv[1:]); sys.exit(0 if exit_code else 1)\" ";
+        std::string checkDependenciesCommand = "py -c \"import sys, pkgutil; exit_code = all(pkgutil.find_loader(package) is not None for package in sys.argv[1:]); sys.exit(0 if exit_code else 1)\" ";
 
         if (requirementsFile.c_str() != nullptr) {
             checkDependenciesCommand += "-r ";
@@ -44,7 +44,7 @@ public:
         // Install dependencies using pip if not installed
         if (dependenciesInstalled != 0) {
             LogManager::GetInstance().LogInfo("Installing dependencies Python...");
-            std::string installDependenciesCommand = "python -m pip install -r \"";
+            std::string installDependenciesCommand = "py -m pip install -r \"";
             installDependenciesCommand += requirementsFile;
             installDependenciesCommand += "\"";
 
@@ -184,7 +184,7 @@ public:
 
     static std::string ExecutePythonFile(const std::string& filePath, const std::string& arguments = "") {
         std::string output;
-        std::string command = "python \"";
+        std::string command = "py \"";
         command += filePath;
         command += "\" ";
         command += arguments;

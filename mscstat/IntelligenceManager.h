@@ -9,6 +9,14 @@ struct Prediction {
     int MEMORY;
     int STORAGE;
     int SCRIPT;
+
+    Prediction(int cpu, int process, int memory, int storage, int script) {
+        CPU = cpu;
+        PROCESS = process;
+        MEMORY = memory;
+        STORAGE = storage;
+        SCRIPT = script;
+    }
 };
 
 class IntelligenceManager {
@@ -124,7 +132,7 @@ private:
 
         // Parse the prediction received from python.
         const auto preds = Utils::ReadIntegersFromFile(predictionFullPath);
-        auto predictions = Prediction{ preds[0] , preds[1] , preds[2] , preds[3] , preds[4] };
+        const Prediction predictions = Prediction(preds[0], preds[1], preds[2], preds[3], preds[4]);
 
         if (predictions.CPU == 1) {
             Utils::NotifyUser("CPU monitor", "Your CPU seems to be under high usage.");

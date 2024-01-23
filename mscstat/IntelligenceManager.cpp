@@ -23,4 +23,4 @@ void IntelligenceManager::Start() {
             errorCount++;
         }
     }
-}
+} 
