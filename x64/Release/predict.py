@@ -1,9 +1,10 @@
 import sys
 import sqlite3
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
 import tensorflow as tf
 import tensorflow as tf
+
+from columns import encodedColumnNames
 
 def load_model(model_path):
     model = tf.keras.models.load_model(model_path)
@@ -52,26 +53,33 @@ def make_predictions(model, conn):
     memoryMetrics.drop(columns=["counter", "id", "timestamp"], inplace=True)
     storageMetrics.drop(columns=[ "counter", "id", "timestamp"], inplace=True)
 
-    combined_data = pd.merge(cpuMetrics, processMetrics, on='counterU', how='left')
-    combined_data = pd.merge(combined_data, memoryMetrics, on='counterU', how='left')
-    combined_data = pd.merge(combined_data, storageMetrics, on='counterU', how='left')
-    combined_data = pd.merge(combined_data, scriptMetrics, on='counterU', how='left')
+    combined_data = pd.merge(cpuMetrics.assign(counterU=1), processMetrics.assign(counterU=1), on='counterU', how='left').drop('counterU', axis=1)
+    combined_data = pd.merge(combined_data.assign(counterU=1), memoryMetrics.assign(counterU=1), on='counterU', how='left').drop('counterU', axis=1)
+    combined_data = pd.merge(combined_data.assign(counterU=1), storageMetrics.assign(counterU=1), on='counterU', how='left').drop('counterU', axis=1)
+    combined_data = pd.merge(combined_data.assign(counterU=1), scriptMetrics.assign(counterU=1), on='counterU', how='left').drop('counterU', axis=1)
     # combined_data = combined_data.dropna()
     print([col for col in combined_data.columns])
+
     columns_to_encode = ['activeProcess', 'activeWindow']
     for column in columns_to_encode:
-        le = LabelEncoder()
-        combined_data[column] = le.fit_transform(combined_data[column])
+        combined_data[column] = combined_data[column].str.strip().replace(to_replace=r"\s", value='_', regex=True)
+    
+    combined_data = pd.get_dummies(combined_data, columns=columns_to_encode, prefix='one_hot', drop_first=True, dummy_na=False, dtype=int)
+
+    for col in encodedColumnNames:
+        if col not in combined_data.columns:
+            combined_data[col] = 0
+
+    # Filter columns based on the specified prefix and whether they are present in the list
+    columns_to_remove = [col for col in combined_data.columns if col.startswith('one_hot') and col not in encodedColumnNames]
+    combined_data.drop(columns=columns_to_remove, inplace=True)
 
     combined_data.fillna(0, inplace=True)
-    combined_data.drop(['counterU'], axis=1, inplace=True)
 
     X = combined_data
     X = X.values.reshape((1, X.shape[0], X.shape[1]))
 
-    # X = tf.constant(X, dtype=tf.float32)
-
-    threshold = 0.75
+    threshold = 0.98
     predictions = model.predict(X)
     predictions = [item[0] for item in predictions]
     predictions =  [1 if val > threshold else 0 for val in predictions]

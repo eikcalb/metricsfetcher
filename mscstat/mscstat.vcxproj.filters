@@ -135,6 +135,9 @@
     <CopyFileToFolders Include="python\predict.py">
       <Filter>python</Filter>
     </CopyFileToFolders>
+    <CopyFileToFolders Include="python\columns.py">
+      <Filter>python</Filter>
+    </CopyFileToFolders>
   </ItemGroup>
   <ItemGroup>
     <None Include="README.md" />
